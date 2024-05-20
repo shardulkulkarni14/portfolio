@@ -7,7 +7,7 @@ Welcome to my professional portfolio repository. Here you can find detailed info
 ## About Me
 Detail-oriented AI and Data Science professional with a robust background in developing cutting-edge solutions in computer vision, deep learning, and data privacy.
 
-## [Skills](skills.md)
+## [Skills](skills/skills.md)
 
 ## [Projects](projects/project1.md)
 - [Project 1: Multi-Perspective Video Analysis System](projects/project1.md)
