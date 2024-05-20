@@ -2,7 +2,7 @@
 
 Welcome to my professional portfolio repository. Here you can find detailed information about my skills, projects, and experience.
 
-![Profile Image](assets/images/profile.jpg)
+<img src="assets/images/profile.jpg" alt="Profile Image" width="200"/>
 
 ## About Me
 Detail-oriented AI and Data Science professional with a robust background in developing cutting-edge solutions in computer vision, deep learning, and data privacy.
