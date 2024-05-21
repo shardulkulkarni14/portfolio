@@ -5,7 +5,7 @@ Welcome to my professional portfolio repository. Here you can find detailed info
 <img src="assets/images/profile.jpg" alt="Profile Image" width="200"/>
 
 ## About Me
-Detail-oriented AI and Data Science professional with a robust background in developing cutting-edge solutions in computer vision, deep learning, and data privacy.
+I am a detail-oriented AI and Data Science professional with a robust background in developing cutting-edge solutions in computer vision, deep learning, and data privacy. Proven track record of improving operational efficiencies and compliance in clinical data environments.
 
 ## [Skills](skills/skills.md)
 
