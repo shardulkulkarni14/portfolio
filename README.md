@@ -10,9 +10,9 @@ I am a detail-oriented AI and Data Science professional with a robust background
 ## [Skills](skills/skills.md)
 
 ## [Projects](projects/project1.md)
-- [Project 1: Multi-Perspective Video Analysis System](projects/project1.md)
-- [Project 2: Validating Attribution Techniques](projects/project2.md)
-- [Project 3: System for Waste Management: Smartzzy](projects/project3.md)
+- [Master Thesis: Multi-Perspective Video Analysis System](projects/project1.md)
+- [Project: Validating Attribution Techniques](projects/project2.md)
+- [Bachelor Thesis: System for Waste Management: Smartzzy](projects/project3.md)
 
 ## [Experience](experience/experience.md)
 
