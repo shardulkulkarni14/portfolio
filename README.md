@@ -1,8 +1,11 @@
 # Shardul Kulkarni's Portfolio
 
-<img src="assets/images/profile.jpg" alt="Profile Image" width="400" height="200"/>
-
-Welcome to my professional portfolio repository. Here you can find detailed information about my skills, projects, and experience.
+<div style="display: flex; align-items: center;">
+  <img src="assets/images/profile.jpg" alt="Profile Image" width="150" style="border-radius: 50%; margin-right: 20px;"/>
+  <div>
+    Welcome to my professional portfolio repository. Here you can find detailed information about my skills, projects, and experience.
+  </div>
+</div>
 
 ## About Me
 AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to Seeking to leverage my skills and experience to contribute to innovative projects in the data science and AI sectors.
