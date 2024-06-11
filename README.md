@@ -1,6 +1,7 @@
 # Shardul Kulkarni's Portfolio
 
-<img src="assets/images/profile.jpg" alt="Profile Image" width="100"/>
+<img src="assets/images/profile.jpg" alt="Profile Image" width="400" height="200"/>
+
 Welcome to my professional portfolio repository. Here you can find detailed information about my skills, projects, and experience.
 
 ## About Me
