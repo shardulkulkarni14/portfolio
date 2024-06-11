@@ -69,7 +69,7 @@ AI and Data Science professional with a robust background in developing end-to-e
 - Grade: 1.4
 - Key subjects: Data Structures, DBMS, Data Analytics, Machine Learning, AI
 
-## [Projects](projects)
+## [Projects](projects/index.md)
 - [Master Thesis: Multi-Perspective Video Analysis System](projects/project1.md)
 - [Project: Validating Attribution Techniques](projects/project2.md)
 - [Bachelor Thesis: System for Waste Management: Smartzzy](projects/project3.md)
