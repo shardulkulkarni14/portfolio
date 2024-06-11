@@ -1,5 +1,7 @@
 # Project 2: Validating Attribution Techniques
 
+[GitHub Repository](https://github.com/shardulkulkarni14/Validating-Attribution-Techniques)
+
 <!-- ![Project Image](../assets/images/project2.jpg) -->
 
 **May 2023 - September 2023**
@@ -11,4 +13,3 @@ Implemented attribution methods including GradCAM, SmoothgradCAM++, ScoreCAM, an
 - Verified vulnerabilities using the Captum library and compared results with state-of-the-art metrics.
 
 **Technologies**: Deep Learning, Image Processing, Computer Vision, Python, PyTorch, TensorFlow.
-[GitHub Repository](https://github.com/shardulkulkarni14/Validating-Attribution-Techniques)

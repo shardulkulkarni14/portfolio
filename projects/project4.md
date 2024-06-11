@@ -1,5 +1,7 @@
 # Project 3: Farmers' Mart
 
+[GitHub Repository](https://github.com/shardulkulkarni14/Farmers-Mart/tree/main)
+
 <!-- ![Project Image](../assets/images/project3.jpg) -->
 
 **October 2020 - June 2021**
@@ -10,4 +12,3 @@ Spearheaded a team of 6 in National level Hackathon - Smart India Hackathon.
 
 **Technologies**: Data Science, Blockchain, Chatbot, SMS, Artificial Intelligence, Deep Learning (Memory Based Algorithm)
 
-[GitHub Repository](https://github.com/shardulkulkarni14/Farmers-Mart/tree/main)
