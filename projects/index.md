@@ -1,12 +1,79 @@
-# Projects
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #343a40;
+  }
+  .navbar {
+    display: flex;
+    background-color: #343a40;
+    padding: 10px;
+    justify-content: center;
+  }
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 14px 20px;
+  }
+  .navbar a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .projects-list {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .projects-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .projects-list a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
 
-Here is an overview of my projects. Click on each project to learn more about it.
-
-<div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-top: 20px;">
-  <ul>
-    <li><a href="projects/project1.md" style="color: #007bff;">Master Thesis: Multi-Perspective Video Analysis System</a></li>
-    <li><a href="projects/project2.md" style="color: #007bff;">Project: Validating Attribution Techniques</a></li>
-    <li><a href="projects/project3.md" style="color: #007bff;">Bachelor Thesis: System for Waste Management: Smartzzy</a></li>
-    <li><a href="projects/project4.md" style="color: #007bff;">Hackathon Project: Farmers' Mart</a></li>
-  </ul>
+<div class="navbar">
+  <a href="../index.md">Home</a>
+  <a href="../index.md#about">About Me</a>
+  <a href="../index.md#resume">Resume</a>
+  <a href="../index.md#skills">Skills</a>
+  <a href="../index.md#experience">Experience</a>
+  <a href="../index.md#education">Education</a>
+  <a href="../index.md#projects">Projects</a>
+  <a href="../index.md#certifications">Certifications</a>
+  <a href="../index.md#achievements">Achievements</a>
+  <a href="../index.md#contact">Contact</a>
 </div>
+
+<div class="container">
+  <div class="projects-list">
+    <h1>Projects</h1>
+    <p>Here is an overview of my projects. Click on each project to learn more about it.</p>
+    <ul>
+      <li><a href="project1.md">Master Thesis: Multi-Perspective Video Analysis System</a></li>
+      <li><a href="project2.md">Project: Validating Attribution Techniques</a></li>
+      <li><a href="project3.md">Bachelor Thesis: System for Waste Management: Smartzzy</a></li>
+      <li><a href="project4.md">Hackathon Project: Farmers' Mart</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
