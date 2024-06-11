@@ -7,14 +7,16 @@ Welcome to my professional portfolio repository. Here you can find detailed info
 ## About Me
 AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to Seeking to leverage my skills and experience to contribute to innovative projects in the data science and AI sectors.
 
+## [Resume](experience/Shardul_Kulkarni_CV_11.06.pdf)
+
 ## Skills
 - **Programming Languages**: Python, C++, Java, Solidity, SQL, R, Shell Scripting, Go, HTML/CSS, JavaScript
-- **Data Science**: Machine Learning, Deep Learning, Computer Vision, NLP, Recommender Systems
-- **Software Development**: GIT, Agile Methodology, DevOps Lifecycles, Docker, Airflow
-- **Frameworks & Libraries**: Flask, Streamlit, TensorFlow, Keras, PyTorch, Scikit-learn, OpenCV, Captum, MLflow, Matplotlib, Plotly, Numpy, Pandas, Tensorboard, JupyterHub
-- **Databases**: Oracle, MySQL, MongoDB
-- **Operating Systems**: Windows, Linux, macOS, Raspbian
-- **Microsoft Office**: Excel, Outlook, PowerShell
+- **Data Science**: Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Recommender Systems
+- **Frameworks & Libraries**: TensorFlow, Keras, PyTorch, Scikit-learn, OpenCV, spaCy, NLTK, Captum, Pandas, Numpy, Matplotlib, MLflow, Wandb
+- **Developer Tools**: Git, Docker, Google Cloud Platform, Azure, Jenkins, PyCharm, JIRA, Linux
+- **Google Cloud Platform**: App Engine, Cloud Run, VertexAI, AutoML
+- **Microsoft**: Excel, Outlook, PowerShell
+- **Languages**: Hindi, Marathi, English, German (Beginner)
 
 ## Experience
 ### Unify.ai
@@ -70,7 +72,19 @@ AI and Data Science professional with a robust background in developing end-to-e
 - [Bachelor Thesis: System for Waste Management: Smartzzy](projects/project3.md)
 - [Hackathon Project: Farmers' Mart](projects/project4.md)
 
-## [Resume](experience/Shardul_Kulkarni_CV_11.06.pdf)
+## Certifications and Patents
+- **Microsoft**: Microsoft Technical Associate for Introduction to Programming Using Python.
+- **Coursera**: Programming for Everybody (Getting Started with Python) by the University of Michigan, Python Data Structures by the University of Michigan, Using Python to Access Web Data by the University of Michigan.
+- **Patents**: 
+  - Smartzzy, Application number: 202121011507, Region: India, Status: Published (Sep’22).
+  - Smart Parkade, Application number: 202121011511, Region: India, Status: Published (Sep’22).
+
+## Achievements & Co-curricular Activities
+- Runner up in Smart India Hackathon conducted in DYPIEMR (Feb’20).
+- Smart India Hackathon - 2020 finalists - Top 5 projects from India (Aug’20).
+- Runner up of Mini Project Exhibition conducted in DYPIEMR in association with ACM (Oct’19).
+- Finalist in the Hackathon “Solve for Safer India” organized by Indian Road Safety Campaign, Ministry of Road Transport & Highway, United Nations of Training & Research, IIT Guwahati, & Robert Bosch Engineering (Apr’19).
+
 
 ## Contact
 - Email: shardul.ask@gmail.com
