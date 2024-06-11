@@ -47,55 +47,6 @@
 </div>
 
 <div class="container">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shardul Kulkarni's Portfolio</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  .navbar {
-    display: flex;
-    background-color: #343a40;
-    padding: 10px;
-    justify-content: center;
-  }
-  .navbar a {
-    color: #f8f9fa;
-    text-decoration: none;
-    padding: 14px 20px;
-  }
-  .navbar a:hover {
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-  }
-  .container {
-    padding: 20px;
-  }
-</style>
-</head>
-<body>
-
-<div class="navbar">
-  <a href="#about">About Me</a>
-  <a href="#resume">Resume</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#achievements">Achievements</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<div class="container">
 
 # Shardul Kulkarni's Portfolio
 
