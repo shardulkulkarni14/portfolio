@@ -1,3 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shardul Kulkarni's Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    display: flex;
+    background-color: #343a40;
+    padding: 10px;
+    justify-content: center;
+  }
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 14px 20px;
+  }
+  .navbar a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  .container {
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#about">About Me</a>
+  <a href="#resume">Resume</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shardul Kulkarni's Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    display: flex;
+    background-color: #343a40;
+    padding: 10px;
+    justify-content: center;
+  }
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 14px 20px;
+  }
+  .navbar a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  .container {
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#about">About Me</a>
+  <a href="#resume">Resume</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="container">
+
 # Shardul Kulkarni's Portfolio
 
 <div style="display: flex; align-items: center; background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
@@ -8,14 +107,14 @@
   </div>
 </div>
 
-## About Me
+## <span id="about">About Me</span>
 <div style="background-color: #e9ecef; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <p style="font-size: 18px; color: #343a40;">AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to innovative projects in the data science and AI sectors.</p>
 </div>
 
-## [Resume](experience/Shardul_Kulkarni_CV_11.06.pdf)
+## <span id="resume">[Resume](experience/Shardul_Kulkarni_CV_11.06.pdf)</span>
 
-## Skills
+## <span id="skills">Skills</span>
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
   <div style="flex: 1; min-width: 200px;">
     <h3 style="color: #007bff;">Programming Languages</h3>
@@ -101,7 +200,7 @@
   </div>
 </div>
 
-## Experience
+## <span id="experience">Experience</span>
 <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <h3 style="color: #343a40;">Unify.ai</h3>
   <p><strong>Open Source Machine Learning Contributor</strong> <em>(May 2024 - Present)</em></p>
@@ -142,7 +241,7 @@
   </ul>
 </div>
 
-## Education
+## <span id="education">Education</span>
 <div style="background-color: #e9ecef; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <h3 style="color: #007bff;">Otto Von Guericke University, Magdeburg, Germany</h3>
   <p><strong>Master of Sciences - Data and Knowledge Engineering</strong> <em>(April 2022 - Present)</em></p>
@@ -159,7 +258,7 @@
   </ul>
 </div>
 
-## [Projects](projects/index.md)
+## <span id="projects">[Projects](projects/index.md)</span>
 <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <ul>
     <li><a href="projects/project1.md" style="color: #007bff;">Master Thesis: Multi-Perspective Video Analysis System</a></li>
@@ -169,7 +268,7 @@
   </ul>
 </div>
 
-## Certifications and Patents
+## <span id="certifications">Certifications and Patents</span>
 <div style="background-color: #e9ecef; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <ul>
     <li><strong>Microsoft</strong>: Microsoft Technical Associate for Introduction to Programming Using Python.</li>
@@ -183,7 +282,7 @@
   </ul>
 </div>
 
-## Achievements & Co-curricular Activities
+## <span id="achievements">Achievements & Co-curricular Activities</span>
 <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <ul>
     <li>Runner up in Smart India Hackathon conducted in DYPIEMR (Feb’20).</li>
@@ -193,7 +292,7 @@
   </ul>
 </div>
 
-## Contact
+## <span id="contact">Contact</span>
 <div style="background-color: #e9ecef; padding: 20px; border-radius: 10px; margin-top: 20px;">
   <ul>
     <li>Email: shardul.ask@gmail.com</li>
@@ -201,3 +300,8 @@
     <li>GitHub: <a href="https://github.com/shardulkulkarni14" style="color: #007bff;">shardulkulkarni14</a></li>
   </ul>
 </div>
+
+</div>
+
+</body>
+</html>
