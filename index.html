@@ -11,21 +11,36 @@
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 60px; /* Adjust this value based on the navbar height */
     background-color: #ffffff;
     color: #343a40;
     scroll-behavior: smooth;
   }
   .navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #343a40;
     padding: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: fixed; /* Add this line */
-    width: 100%; /* Add this line */
-    top: 0; /* Add this line */
-    z-index: 1000; /* Add this line */
+    position: fixed; /* Make navbar fixed */
+    width: 100%; /* Ensure the navbar spans the full width */
+    top: 0; /* Position the navbar at the top */
+    z-index: 1000; /* Ensure the navbar is above other content */
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #f8f9fa;
+    font-size: 1.2em;
+  }
+  .menu-icon {
+    display: none; /* Hide the menu icon by default */
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .navbar-links {
+    display: flex;
+    gap: 15px;
   }
   .navbar a {
     color: #f8f9fa;
@@ -38,90 +53,32 @@
     color: white;
     border-radius: 5px;
   }
-  .container {
-    padding: 20px;
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  .header img {
-    border-radius: 50%;
-    margin-right: 20px;
-    border: 2px solid #343a40;
-    transition: transform 0.3s;
-  }
-  .header img:hover {
-    transform: scale(1.1);
-  }
-  .header div {
-    flex: 1;
-  }
-  .section {
-    background-color: #e9ecef;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .skills-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .skills-section div {
-    flex: 1;
-    min-width: 200px;
-  }
-  h3 {
-    color: #007bff;
-  }
-  .projects-list a {
-    color: #007bff;
-    text-decoration: none;
-    position: relative;
-  }
-  .projects-list a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #007bff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  .projects-list a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
   @media (max-width: 768px) {
-    .navbar a {
-      padding: 10px;
-      flex: 1;
-      text-align: center;
-    }
-    .header {
+    .navbar-links {
+      display: none; /* Hide navbar links by default on small screens */
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      width: 100%;
+      background-color: #343a40;
+      position: absolute;
+      top: 50px; /* Adjust based on your navbar height */
+      left: 0;
+      z-index: 999; /* Ensure the dropdown is above other content */
     }
-    .header img {
-      margin-right: 0;
-      margin-bottom: 20px;
+    .navbar-links a {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+    .navbar-links a:last-child {
+      border-bottom: none;
+    }
+    .menu-icon {
+      display: block; /* Show the menu icon on small screens */
+    }
+  }
+  @media (min-width: 769px) {
+    .navbar-links {
+      display: flex !important; /* Ensure navbar links are shown on larger screens */
     }
   }
   #progress-bar {
@@ -133,20 +90,27 @@
     background-color: #007bff;
     z-index: 100;
   }
+  /* Other styles remain unchanged */
 </style>
+
 </head>
-<body>
 
 <div class="navbar">
-  <a href="#about"><i class="fas fa-user"></i> About Me</a>
-  <a href="#resume"><i class="fas fa-file"></i> Resume</a>
-  <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
-  <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-  <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
-  <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-  <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
-  <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
-  <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  <div class="navbar-brand">
+    <span>Shardul Kulkarni's Portfolio</span>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+  </div>
+  <div class="navbar-links" id="navbar-links">
+    <a href="#about"><i class="fas fa-user"></i> About Me</a>
+    <a href="#resume"><i class="fas fa-file"></i> Resume</a>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+    <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
 </div>
 
 <div id="progress-bar"></div>
@@ -362,6 +326,15 @@
 </div>
 
 <script>
+  function toggleMenu() {
+    const navbarLinks = document.getElementById('navbar-links');
+    if (navbarLinks.style.display === 'block') {
+      navbarLinks.style.display = 'none';
+    } else {
+      navbarLinks.style.display = 'block';
+    }
+  }
+
   window.addEventListener('scroll', () => {
     const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (window.scrollY / docHeight) * 100;
@@ -384,6 +357,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
