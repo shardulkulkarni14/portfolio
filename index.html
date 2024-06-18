@@ -18,6 +18,7 @@
     background-color: #343a40;
     padding: 10px;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .navbar a {
     color: #f8f9fa;
@@ -39,11 +40,15 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
   }
   .header img {
     border-radius: 50%;
     margin-right: 20px;
     border: 2px solid #343a40;
+  }
+  .header div {
+    flex: 1;
   }
   .section {
     background-color: #e9ecef;
@@ -62,6 +67,22 @@
   }
   h3 {
     color: #007bff;
+  }
+  @media (max-width: 768px) {
+    .navbar a {
+      padding: 10px;
+      flex: 1;
+      text-align: center;
+    }
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .header img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 </style>
 </head>
@@ -82,7 +103,7 @@
 <div class="container">
 
   <div class="header">
-    <img src="assets/images/profile_new.jpg" alt="Profile Image" width="165" height = "200"/>
+    <img src="assets/images/profile_new.jpg" alt="Profile Image" width="165" height="200"/>
     <div>
       <h1>Welcome to my professional portfolio repository.</h1>
       <p>Here you can find detailed information about my skills, projects, and experience.</p>
