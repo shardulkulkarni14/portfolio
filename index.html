@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shardul Kulkarni's Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -34,42 +34,45 @@
     </div>
 </nav>
 
-<header class="jumbotron jumbotron-fluid text-center bg-light">
-    <div class="container">
-        <img src="assets/images/profile_new.jpg" alt="Profile Image" class="rounded-circle img-fluid mb-4 animate__animated animate__fadeIn">
-        <h1 class="display-4 animate__animated animate__fadeInUp">Welcome to my professional portfolio repository.</h1>
-        <p class="lead animate__animated animate__fadeInUp">Here you can find detailed information about my skills, projects, and experience.</p>
+<div id="progress-bar"></div>
+
+<div class="container mt-5 pt-5">
+    <div class="header text-center my-4">
+        <img src="assets/images/profile_new.jpg" alt="Profile Image" class="profile-img rounded-circle mx-auto d-block animate__animated animate__fadeIn" style="width: 165px; height: 200px;"/>
+        <h1 class="animate__animated animate__fadeInDown">Welcome to my professional portfolio repository.</h1>
+        <!-- <p class="animate__animated animate__fadeInUp">Here you can find detailed information about my skills, projects, and experience.</p> -->
     </div>
-</header>
 
-<div class="container">
-    <section id="about" class="my-5">
-        <h2 class="text-center mb-4">About Me</h2>
-        <p class="text-center">AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to innovative projects in the data science and AI sectors.</p>
-    </section>
+    <div class="section" id="about">
+        <h2>About Me</h2>
+        <p>AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to innovative projects in the data science and AI sectors.</p>
+    </div>
 
-    <section id="resume" class="my-5">
-        <h2 class="text-center mb-4">Resume</h2>
-        <p class="text-center"><a href="experience/Shardul_Kulkarni_CV-June11.pdf" class="btn btn-primary">Download My Resume</a></p>
-    </section>
+    <div class="section" id="resume">
+        <h2><a href="experience/Shardul_Kulkarni_CV-June11.pdf" class="projects-list">Resume</a></h2>
+    </div>
 
-    <section id="skills" class="my-5">
-        <h2 class="text-center mb-4">Skills</h2>
-        <div class="row text-center">
+    <div class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-section row">
             <div class="col-md-4">
                 <h3>Programming Languages</h3>
-                <ul class="list-unstyled">
-                    <li><i class="devicon-python-plain"></i> Python</li>
-                    <li><i class="devicon-cplusplus-plain"></i> C++</li>
-                    <li><i class="devicon-java-plain"></i> Java</li>
-                    <li><i class="devicon-html5-plain"></i> HTML</li>
-                    <li><i class="devicon-css3-plain"></i> CSS</li>
-                    <li><i class="devicon-javascript-plain"></i> JavaScript</li>
+                <ul>
+                    <li>Python <i class="devicon-python-plain colored"></i></li>
+                    <li>C++ <i class="devicon-cplusplus-plain colored"></i></li>
+                    <li>Java <i class="devicon-java-plain colored"></i></li>
+                    <li>Solidity <i class="devicon-solidity-plain colored"></i></li>
+                    <li>SQL <i class="devicon-mysql-plain colored"></i></li>
+                    <li>R <i class="devicon-r-plain colored"></i></li>
+                    <li>Shell Scripting <i class="devicon-linux-plain colored"></i></li>
+                    <li>Go <i class="devicon-go-plain colored"></i></li>
+                    <li>HTML/CSS <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i></li>
+                    <li>JavaScript <i class="devicon-javascript-plain colored"></i></li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <h3>Data Science</h3>
-                <ul class="list-unstyled">
+                <ul>
                     <li>Machine Learning</li>
                     <li>Deep Learning</li>
                     <li>Computer Vision</li>
@@ -79,19 +82,70 @@
             </div>
             <div class="col-md-4">
                 <h3>Frameworks & Libraries</h3>
-                <ul class="list-unstyled">
-                    <li><i class="devicon-tensorflow-original"></i> TensorFlow</li>
-                    <li><i class="devicon-pytorch-plain"></i> PyTorch</li>
-                    <li><i class="devicon-numpy-plain"></i> Numpy</li>
-                    <li><i class="devicon-pandas-plain"></i> Pandas</li>
-                    <li><i class="devicon-matplotlib-plain"></i> Matplotlib</li>
+                <ul>
+                    <li>TensorFlow <i class="devicon-tensorflow-original colored"></i></li>
+                    <li>Keras <i class="devicon-keras-plain colored"></i></li>
+                    <li>PyTorch <i class="devicon-pytorch-plain colored"></i></li>
+                    <li>Scikit-learn <i class="devicon-scikitlearn-plain colored"></i></li>
+                    <li>OpenCV <i class="devicon-opencv-plain colored"></i></li>
+                    <li>NLTK <i class="devicon-nltk-plain colored"></i></li>
+                    <li>Captum <i class="devicon-pytorch-plain colored"></i></li>
+                    <li>Pandas <i class="devicon-pandas-plain colored"></i></li>
+                    <li>Numpy <i class="devicon-numpy-plain colored"></i></li>
+                    <li>Matplotlib <i class="devicon-matplotlib-plain colored"></i></li>
+                    <li>MLflow <i class="devicon-mlflow-plain colored"></i></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Developer Tools</h3>
+                <ul>
+                    <li>Git <i class="devicon-git-plain colored"></i></li>
+                    <li>Docker <i class="devicon-docker-plain colored"></i></li>
+                    <li>Google Cloud Platform <i class="devicon-googlecloud-plain colored"></i></li>
+                    <li>Azure <i class="devicon-azure-plain colored"></i></li>
+                    <li>Jenkins <i class="devicon-jenkins-plain colored"></i></li>
+                    <li>PyCharm <i class="devicon-pycharm-plain colored"></i></li>
+                    <li>JIRA <i class="devicon-jira-plain colored"></i></li>
+                    <li>Microsoft Office <i class="devicon-windows8-original colored"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Databases</h3>
+                <ul>
+                    <li>MySQL <i class="devicon-mysql-plain colored"></i></li>
+                    <li>PostgreSQL <i class="devicon-postgresql-plain colored"></i></li>
+                    <li>MongoDB <i class="devicon-mongodb-plain colored"></i></li>
+                    <li>SQLite <i class="devicon-sqlite-plain colored"></i></li>
+                    <li>Oracle <i class="devicon-oracle-plain colored"></i></li>
+                    <li>Firebase <i class="devicon-firebase-plain colored"></i></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Operating System</h3>
+                <ul>
+                    <li>Windows <i class="devicon-windows8-original colored"></i></li>
+                    <li>Linux <i class="devicon-linux-plain colored"></i></li>
+                    <li>MacOS <i class="devicon-apple-original colored"></i></li>
+                    <li>Raspbian <i class="devicon-raspberrypi-line colored"></i></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Hindi</li>
+                    <li>Marathi</li>
+                    <li>English (C1)</li>
+                    <li>German (A2)</li>
                 </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="experience" class="my-5">
-        <h2 class="text-center mb-4">Experience</h2>
+    <div class="section" id="experience">
+        <h2>Experience</h2>
         <h3>Unify.ai</h3>
         <p><strong>Open Source Machine Learning Contributor - Volunteer</strong> <em>(May 2024 - Present)</em></p>
         <ul>
@@ -125,10 +179,10 @@
             <li>Implemented a Blockchain PoC for IoT-based transportation of sensitive goods.</li>
             <li>Tools & Technologies: Ethereum Blockchain, Solidity, Go, Javascript, HTML, CSS, MetaMask.</li>
         </ul>
-    </section>
+    </div>
 
-    <section id="education" class="my-5">
-        <h2 class="text-center mb-4">Education</h2>
+    <div class="section" id="education">
+        <h2>Education</h2>
         <h3>Otto Von Guericke University, Magdeburg, Germany</h3>
         <p><strong>Master of Sciences - Data and Knowledge Engineering</strong> <em>(April 2022 - October 2024 (Expected))</em></p>
         <ul>
@@ -141,15 +195,21 @@
             <li>Grade: 1.4</li>
             <li>Key subjects: Data Structures, DBMS, Data Analytics, Machine Learning, AI</li>
         </ul>
-    </section>
+    </div>
 
-    <section id="projects" class="my-5">
-        <h2 class="text-center mb-4"><a href="projects/index.html" class="btn btn-primary">Projects</a></h2>
-    </section>
+    <div class="section" id="projects">
+        <h2><a href="projects/index.html" class="projects-list">Projects</a></h2>
+        <ul>
+            <li><a href="projects/project1.html" class="projects-list">Master Thesis: Multi-Perspective Video Analysis System</a></li>
+            <li><a href="projects/project2.html" class="projects-list">Project: Validating Attribution Techniques</a></li>
+            <li><a href="projects/project3.html" class="projects-list">Bachelor Thesis: System for Waste Management: Smartzzy</a></li>
+            <li><a href="projects/project4.html" class="projects-list">Hackathon Project: Farmers' Mart</a></li>
+        </ul>
+    </div>
 
-    <section id="certifications" class="my-5">
-        <h2 class="text-center mb-4">Certifications and Patents</h2>
-        <ul class="list-unstyled text-center">
+    <div class="section" id="certifications">
+        <h2>Certifications and Patents</h2>
+        <ul>
             <li><strong>Microsoft</strong>: Microsoft Technical Associate for Introduction to Programming Using Python. (August 2020)</li>
             <li><strong>Coursera</strong>: Programming for Everybody (Getting Started with Python) by the University of Michigan (May 2020), Python Data Structures by the University of Michigan (May 2020), Using Python to Access Web Data by the University of Michigan. (June 2020)</li>
             <li><strong>Patents</strong>: 
@@ -159,11 +219,11 @@
                 </ul>
             </li>
         </ul>
-    </section>
+    </div>
 
-    <section id="achievements" class="my-5">
-        <h2 class="text-center mb-4">Achievements & Co-curricular Activities</h2>
-        <ul class="list-unstyled text-center">
+    <div class="section" id="achievements">
+        <h2>Achievements & Co-curricular Activities</h2>
+        <ul>
             <li>Runner up in Smart India Hackathon conducted in DYPIEMR (February 2020).</li>
             <li>Smart India Hackathon - 2020 finalists - Top 5 projects from India (August 2020).</li>
             <li>Runner up in Gamming Jamming event conductedin DYPIEMR by COMPSA (February 2020).</li>
@@ -174,21 +234,22 @@
             <li>Winner of Model Making Competition organized by Computer Department of DYPIEMR in association with ISTE Student' s chapter, Pune,India (July 2018).</li>
             <li>Second Runner up in technical project competition organized by ExpertsHub (June 2018).</li>
         </ul>
-    </section>
+    </div>
 
-    <section id="contact" class="my-5">
-        <h2 class="text-center mb-4">Contact</h2>
-        <ul class="list-unstyled text-center">
+    <div class="section" id="contact">
+        <h2>Contact</h2>
+        <ul>
             <li>Email: shardul.ask@gmail.com</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/">shardul-kulkarni14</a></li>
-            <li>GitHub: <a href="https://github.com/shardulkulkarni14">shardulkulkarni14</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/" class="projects-list">shardul-kulkarni14</a></li>
+            <li>GitHub: <a href="https://github.com/shardulkulkarni14" class="projects-list">shardulkulkarni14</a></li>
         </ul>
-    </section>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
