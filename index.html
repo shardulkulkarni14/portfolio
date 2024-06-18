@@ -90,10 +90,92 @@
     background-color: #007bff;
     z-index: 100;
   }
-  /* Other styles remain unchanged */
+  .container {
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header img {
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #343a40;
+    transition: transform 0.3s;
+    width: 165px;
+    height: 200px;
+  }
+  .header img:hover {
+    transform: scale(1.1);
+  }
+  .header div {
+    flex: 1;
+  }
+  .section {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .skills-section div {
+    flex: 1;
+    min-width: 200px;
+  }
+  h3 {
+    color: #007bff;
+  }
+  .projects-list a {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+  }
+  .projects-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .projects-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .header img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
 </style>
-
 </head>
+<body>
 
 <div class="navbar">
   <div class="navbar-brand">
@@ -116,9 +198,8 @@
 <div id="progress-bar"></div>
 
 <div class="container">
-
   <div class="header">
-    <img src="assets/images/profile_new.jpg" alt="Profile Image" width="165" height="200"/>
+    <img src="assets/images/profile_new.jpg" alt="Profile Image" />
     <div>
       <h1>Welcome to my professional portfolio repository.</h1>
       <p>Here you can find detailed information about my skills, projects, and experience.</p>
@@ -357,7 +438,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
