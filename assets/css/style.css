@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Adjust this value based on the navbar height */
+    background-color: #ffffff;
+    color: #343a40;
+    scroll-behavior: smooth;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    padding: 10px;
+    position: fixed; /* Make navbar fixed */
+    width: 100%; /* Ensure the navbar spans the full width */
+    top: 0; /* Position the navbar at the top */
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #f8f9fa;
+    font-size: 1.2em;
+}
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+.navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide navbar links by default on small screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: #343a40;
+        position: absolute;
+        top: 50px; /* Adjust based on your navbar height */
+        left: 0;
+        z-index: 999; /* Ensure the dropdown is above other content */
+    }
+    .navbar-links a {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+    .navbar-links a:last-child {
+        border-bottom: none;
+    }
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+}
+@media (min-width: 769px) {
+    .navbar-links {
+        display: flex !important; /* Ensure navbar links are shown on larger screens */
+    }
+}
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #007bff;
+    z-index: 100;
+}
+.container {
+    padding: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.header img {
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #343a40;
+    transition: transform 0.3s;
+    width: 165px;
+    height: 200px;
+}
+.header img:hover {
+    transform: scale(1.1);
+}
+.header div {
+    flex: 1;
+}
+.section {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.skills-section div {
+    flex: 1;
+    min-width: 200px;
+}
+h3 {
+    color: #007bff;
+}
+.projects-list a {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+}
+.projects-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.projects-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+.project-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.project-content {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+}
