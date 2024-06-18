@@ -11,7 +11,7 @@
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-top: 60px; /* Adjust this value based on the navbar height */
+    padding-top: 40px; /* Adjust this value based on the navbar height */
     background-color: #ffffff;
     color: #343a40;
     scroll-behavior: smooth;
@@ -90,12 +90,39 @@
     background-color: #007bff;
     z-index: 100;
   }
-  /* Other styles remain unchanged */
+  .container {
+    padding: 20px;
+  }
+  .projects-list {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .projects-list a {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+  }
+  .projects-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .projects-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 </style>
-
 </head>
 <body>
-
 
 <div class="navbar">
   <div class="navbar-brand">
@@ -103,15 +130,16 @@
     <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
   </div>
   <div class="navbar-links" id="navbar-links">
-    <a href="#about"><i class="fas fa-user"></i> About Me</a>
-    <a href="#resume"><i class="fas fa-file"></i> Resume</a>
-    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
-    <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
-    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-    <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
-    <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
-    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="../index.html#about"><i class="fas fa-user"></i> About Me</a>
+    <a href="../index.html#resume"><i class="fas fa-file"></i> Resume</a>
+    <a href="../index.html#skills"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="../index.html#experience"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="../index.html#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="../index.html#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="../index.html#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+    <a href="../index.html#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    <a href="../index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
   </div>
 </div>
 
@@ -145,24 +173,7 @@
     const scrolled = (window.scrollY / docHeight) * 100;
     document.getElementById('progress-bar').style.width = `${scrolled}%`;
   });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.section');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  });
 </script>
-
 
 </body>
 </html>
