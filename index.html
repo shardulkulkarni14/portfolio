@@ -1,196 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shardul Kulkarni's Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shardul Kulkarni's Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Adjust this value based on the navbar height */
+    background-color: #ffffff;
+    color: #343a40;
+    scroll-behavior: smooth;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    padding: 10px;
+    position: fixed; /* Make navbar fixed */
+    width: 100%; /* Ensure the navbar spans the full width */
+    top: 0; /* Position the navbar at the top */
+    z-index: 1000; /* Ensure the navbar is above other content */
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #f8f9fa;
+    font-size: 1.2em;
+  }
+  .menu-icon {
+    display: none; /* Hide the menu icon by default */
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .navbar-links {
+    display: flex;
+    gap: 15px;
+  }
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navbar a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none; /* Hide navbar links by default on small screens */
+      flex-direction: column;
+      width: 100%;
+      background-color: #343a40;
+      position: absolute;
+      top: 50px; /* Adjust based on your navbar height */
+      left: 0;
+      z-index: 999; /* Ensure the dropdown is above other content */
+    }
+    .navbar-links a {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+    .navbar-links a:last-child {
+      border-bottom: none;
+    }
+    .menu-icon {
+      display: block; /* Show the menu icon on small screens */
+    }
+  }
+  @media (min-width: 769px) {
+    .navbar-links {
+      display: flex !important; /* Ensure navbar links are shown on larger screens */
+    }
+  }
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #007bff;
+    z-index: 100;
+  }
+  .container {
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header img {
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #343a40;
+    transition: transform 0.3s;
+    width: 165px;
+    height: 200px;
+  }
+  .header img:hover {
+    transform: scale(1.1);
+  }
+  .header div {
+    flex: 1;
+  }
+  .section {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .skills-section div {
+    flex: 1;
+    min-width: 200px;
+  }
+  h3 {
+    color: #007bff;
+  }
+  .projects-list a {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+  }
+  .projects-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .projects-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .header img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+</style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Shardul Kulkarni</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<header class="jumbotron jumbotron-fluid bg-light">
-    <div class="container d-flex align-items-center">
-        <img src="assets/images/profile_new.jpg" alt="Profile Image" class="rounded-circle img-fluid profile-img">
-        <div class="ml-4">
-            <h1 class="display-4">Welcome to my professional portfolio repository.</h1>
-            <p class="lead">Here you can find detailed information about my skills, projects, and experience.</p>
-        </div>
-    </div>
-</header>
-
-<div class="container">
-    <section id="about" class="my-5">
-        <h2 class="text-center mb-4">About Me</h2>
-        <p class="text-center">AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to innovative projects in the data science and AI sectors.</p>
-    </section>
-
-    <section id="resume" class="my-5">
-        <h2 class="text-center mb-4">Resume</h2>
-        <p class="text-center"><a href="experience/Shardul_Kulkarni_CV-June11.pdf" class="btn btn-primary">Download My Resume</a></p>
-    </section>
-
-    <section id="skills" class="my-5">
-        <h2 class="text-center mb-4">Skills</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h3>Programming Languages</h3>
-                <ul class="list-unstyled">
-                    <li><i class="devicon-python-plain"></i> Python</li>
-                    <li><i class="devicon-cplusplus-plain"></i> C++</li>
-                    <li><i class="devicon-java-plain"></i> Java</li>
-                    <li><i class="devicon-html5-plain"></i> HTML</li>
-                    <li><i class="devicon-css3-plain"></i> CSS</li>
-                    <li><i class="devicon-javascript-plain"></i> JavaScript</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Data Science</h3>
-                <ul class="list-unstyled">
-                    <li>Machine Learning</li>
-                    <li>Deep Learning</li>
-                    <li>Computer Vision</li>
-                    <li>Natural Language Processing</li>
-                    <li>Recommender Systems</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Frameworks & Libraries</h3>
-                <ul class="list-unstyled">
-                    <li><i class="devicon-tensorflow-original"></i> TensorFlow</li>
-                    <li><i class="devicon-pytorch-plain"></i> PyTorch</li>
-                    <li><i class="devicon-numpy-plain"></i> Numpy</li>
-                    <li><i class="devicon-pandas-plain"></i> Pandas</li>
-                    <li><i class="devicon-matplotlib-plain"></i> Matplotlib</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="my-5">
-        <h2 class="text-center mb-4">Experience</h2>
-        <h3>Unify.ai</h3>
-        <p><strong>Open Source Machine Learning Contributor - Volunteer</strong> <em>(May 2024 - Present)</em></p>
-        <ul>
-            <li>Joined this recently in a volunteer program, so getting used to the platform.</li>
-            <li>Contributing to the development and maintenance of open-source machine learning projects.</li>
-        </ul>
-        <h3>mediMESH - Clinical Insights, Magdeburg, Germany</h3>
-        <p><strong>Work Student - Artificial Intelligence Engineer</strong> <em>(March 2023 - Present)</em></p>
-        <ul>
-            <li>Advanced from Research Assistant to AI and Software Engineering Work Student, spearheading AI innovations in clinical data privacy.</li>
-            <li>Developed a cutting-edge anonymization pipeline, reducing processing time from 3 days to less than 7 minutes (99.84% improvement) using Detectron2, YOLO, SAM, Docker, and OpenCV.</li>
-            <li>Implemented custom face detection modules and streamlined annotation with CVAT, enhancing accuracy and compliance with privacy standards.</li>
-            <li>Managed system administration and data workflows, ensuring seamless operation and data format integration (COCO, CVAT 1.1).</li>
-        </ul>
-        <h3>CemtrexLabs, Pune, India</h3>
-        <p><strong>Data Science Intern</strong> <em>(July 2020 - August 2020)</em></p>
-        <ul>
-            <li>Generated and cleaned the dataset from open source images required for the video analytics project.</li>
-            <li>Improved the transfer time of large datasets from 2 mins for 100 images to less than 1 sec for 100 images (99.17% improvement) by creating Python APIs.</li>
-        </ul>
-        <h3>Knowledge Solution India, Pune, India</h3>
-        <p><strong>Data Science Trainee & Intern</strong> <em>(May 2020 - June 2020)</em></p>
-        <ul>
-            <li>Project: Real-time COVID-19 Forecasting.</li>
-            <li>Visualized and analyzed the dataset using Matplotlib and Seaborn to recognize patterns & trends in the data.</li>
-            <li>Predicted the potential COVID-19 cases in different regions of India using the Linear Regression algorithm.</li>
-        </ul>
-        <h3>Athens Information Technology, Greece</h></h3>
-        <p><strong>Undergraduate Fellowship Summer Project and Research Program</strong> <em>(June 2019 - July 2019)</em></p>
-        <ul>
-            <li>Implemented a Blockchain PoC for IoT-based transportation of sensitive goods.</li>
-            <li>Tools & Technologies: Ethereum Blockchain, Solidity, Go, Javascript, HTML, CSS, MetaMask.</li>
-        </ul>
-    </section>
-
-    <section id="education" class="my-5">
-        <h2 class="text-center mb-4">Education</h2>
-        <h3>Otto Von Guericke University, Magdeburg, Germany</h3>
-        <p><strong>Master of Sciences - Data and Knowledge Engineering</strong> <em>(April 2022 - October 2024 (Expected))</em></p>
-        <ul>
-            <li>Grade: 1.9</li>
-            <li>Key subjects: Machine Learning, Deep Learning, Data Mining, Cloud DevOps, Visual Analytics, Recommenders</li>
-        </ul>
-        <h3>Dr. D. Y. Patil Institute Of Engineering Management And Research, Pune, India</h3>
-        <p><strong>Bachelor of Engineering - Computer Engineering</strong> <em>(July 2017 - July 2021)</em></p>
-        <ul>
-            <li>Grade: 1.4</li>
-            <li>Key subjects: Data Structures, DBMS, Data Analytics, Machine Learning, AI</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="my-5">
-        <h2 class="text-center mb-4"><a href="projects/index.html" class="btn btn-primary">Projects</a></h2>
-    </section>
-
-    <section id="certifications" class="my-5">
-        <h2 class="text-center mb-4">Certifications and Patents</h2>
-        <ul class="list-unstyled text-center">
-            <li><strong>Microsoft</strong>: Microsoft Technical Associate for Introduction to Programming Using Python. (August 2020)</li>
-            <li><strong>Coursera</strong>: Programming for Everybody (Getting Started with Python) by the University of Michigan (May 2020), Python Data Structures by the University of Michigan (May 2020), Using Python to Access Web Data by the University of Michigan. (June 2020)</li>
-            <li><strong>Patents</strong>: 
-                <ul>
-                    <li>Smartzzy, Application number: 202121011507, Region: India, Status: Published (September 2022).</li>
-                    <li>Smart Parkade, Application number: 202121011511, Region: India, Status: Published (September 2022).</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section id="achievements" class="my-5">
-        <h2 class="text-center mb-4">Achievements & Co-curricular Activities</h2>
-        <ul class="list-unstyled text-center">
-            <li>Runner up in Smart India Hackathon conducted in DYPIEMR (February 2020).</li>
-            <li>Smart India Hackathon - 2020 finalists - Top 5 projects from India (August 2020).</li>
-            <li>Runner up in Gamming Jamming event conductedin DYPIEMR by COMPSA (February 2020).</li>
-            <li>Winner of Computer Network Model Making Competition conducted in DYPIEMR in association with Computer Society of India (October 2019).</li>
-            <li>Runner up of Mini Project Exhibition conducted in DYPIEMR in association with ACM (October 2019).</li>
-            <li>Finalist in the Hackathon “Solve for Safer India” organized by Indian Road Safety Campaign, Ministry of Road Transport & Highway, United Nations of Training & Research, IIT Guwahati, & Robert Bosch Engineering (April 2019).</li>
-            <li>Runner up of Techno-Frenzy Competition held in Department of Computer Engineering in association with DYPIEMR ACM Student Chapter(February 2019).</li>
-            <li>Winner of Model Making Competition organized by Computer Department of DYPIEMR in association with ISTE Student' s chapter, Pune,India (July 2018).</li>
-            <li>Second Runner up in technical project competition organized by ExpertsHub (June 2018).</li>
-        </ul>
-    </section>
-
-    <section id="contact" class="my-5">
-        <h2 class="text-center mb-4">Contact</h2>
-        <ul class="list-unstyled text-center">
-            <li>Email: shardul.ask@gmail.com</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/">shardul-kulkarni14</a></li>
-            <li>GitHub: <a href="https://github.com/shardulkulkarni14">shardulkulkarni14</a></li>
-        </ul>
-    </section>
+<div class="navbar">
+  <div class="navbar-brand">
+    <span>Shardul Kulkarni's Portfolio</span>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+  </div>
+  <div class="navbar-links" id="navbar-links">
+    <a href="#about"><i class="fas fa-user"></i> About Me</a>
+    <a href="#resume"><i class="fas fa-file"></i> Resume</a>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+    <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
+<div id="progress-bar"></div>
+
+<div class="container">
+  <div class="header">
+    <img src="assets/images/profile_new.jpg" alt="Profile Image" />
+    <div>
+      <h1>Welcome to my professional portfolio repository.</h1>
+      <p>Here you can find detailed information about my skills, projects, and experience.</p>
+    </div>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <p>AI and Data Science professional with a robust background in developing end-to-end solutions in computer vision, deep learning, and data privacy. Proven track record of optimizing machine learning workflows and enhancing operational efficiencies. Seeking to leverage my skills to contribute to innovative projects in the data science and AI sectors.</p>
+  </div>
+
+  <div class="section" id="resume">
+    <h2><a href="experience/Shardul_Kulkarni_CV-June11.pdf" class="projects-list">Resume</a></h2>
+  </div>
+
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-section">
+      <div>
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>C++</li>
+          <li>Java</li>
+          <li>Solidity</li>
+          <li>SQL</li>
+          <li>R</li>
+          <li>Shell Scripting</li>
+          <li>Go</li>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Data Science</h3>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>Computer Vision</li>
+          <li>Natural Language Processing</li>
+          <li>Recommender Systems</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Frameworks & Libraries</h3>
+        <ul>
+          <li>TensorFlow</li>
+          <li>Keras</li>
+          <li>PyTorch</li>
+          <li>Scikit-learn</li>
+          <li>OpenCV</li>
+          <li>spaCy</li>
+          <li>NLTK</li>
+          <li>Captum</li>
+          <li>Pandas</li>
+          <li>Numpy</li>
+          <li>Matplotlib</li>
+          <li>MLflow</li>
+          <li>Wandb</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Developer Tools</h3>
+        <ul>
+          <li>Git</li>
+          <li>Docker</li>
+          <li>Google Cloud Platform</li>
+          <li>Azure</li>
+          <li>Jenkins</li>
+          <li>PyCharm</li>
+          <li>JIRA</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Google Cloud Platform</h3>
+        <ul>
+          <li>App Engine</li>
+          <li>Cloud Run</li>
+          <li>VertexAI</li>
+          <li>AutoML</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Microsoft</h3>
+        <ul>
+          <li>Excel</li>
+          <li>Outlook</li>
+          <li>PowerShell</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <ul>
+          <li>Hindi</li>
+          <li>Marathi</li>
+          <li>English</li>
+          <li>German (Beginner)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="experience">
+    <h2>Experience</h2>
+    <h3>Unify.ai</h3>
+    <p><strong>Open Source Machine Learning Contributor - Volunteer</strong> <em>(May 2024 - Present)</em></p>
+    <ul>
+      <li>Joined this recently in a volunteer program, so getting used to the platform.</li>
+      <li>Contributing to the development and maintenance of open-source machine learning projects.</li>
+    </ul>
+    <h3>mediMESH - Clinical Insights, Magdeburg, Germany</h3>
+    <p><strong>Work Student - Artificial Intelligence Engineer</strong> <em>(March 2023 - Present)</em></p>
+    <ul>
+      <li>Advanced from Research Assistant to AI and Software Engineering Work Student, spearheading AI innovations in clinical data privacy.</li>
+      <li>Developed a cutting-edge anonymization pipeline, reducing processing time from 3 days to less than 7 minutes (99.84% improvement) using Detectron2, YOLO, SAM, Docker, and OpenCV.</li>
+      <li>Implemented custom face detection modules and streamlined annotation with CVAT, enhancing accuracy and compliance with privacy standards.</li>
+      <li>Managed system administration and data workflows, ensuring seamless operation and data format integration (COCO, CVAT 1.1).</li>
+    </ul>
+    <h3>CemtrexLabs, Pune, India</h3>
+    <p><strong>Data Science Intern</strong> <em>(July 2020 - August 2020)</em></p>
+    <ul>
+      <li>Generated and cleaned the dataset from open source images required for the video analytics project.</li>
+      <li>Improved the transfer time of large datasets from 2 mins for 100 images to less than 1 sec for 100 images (99.17% improvement) by creating Python APIs.</li>
+    </ul>
+    <h3>Knowledge Solution India, Pune, India</h3>
+    <p><strong>Data Science Trainee & Intern</strong> <em>(May 2020 - June 2020)</em></p>
+    <ul>
+      <li>Project: Real-time COVID-19 Forecasting.</li>
+      <li>Visualized and analyzed the dataset using Matplotlib and Seaborn to recognize patterns & trends in the data.</li>
+      <li>Predicted the potential COVID-19 cases in different regions of India using the Linear Regression algorithm.</li>
+    </ul>
+    <h3>Athens Information Technology, Greece</h3>
+    <p><strong>Undergraduate Fellowship Summer Project and Research Program</strong> <em>(June 2019 - July 2019)</em></p>
+    <ul>
+      <li>Implemented a Blockchain PoC for IoT-based transportation of sensitive goods.</li>
+      <li>Tools & Technologies: Ethereum Blockchain, Solidity, Go, Javascript, HTML, CSS, MetaMask.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="education">
+    <h2>Education</h2>
+    <h3>Otto Von Guericke University, Magdeburg, Germany</h3>
+    <p><strong>Master of Sciences - Data and Knowledge Engineering</strong> <em>(April 2022 - October 2024 (Expected))</em></p>
+    <ul>
+      <li>Grade: 1.9</li>
+      <li>Key subjects: Machine Learning, Deep Learning, Data Mining, Cloud DevOps, Visual Analytics, Recommenders</li>
+    </ul>
+    <h3>Dr. D. Y. Patil Institute Of Engineering Management And Research, Pune, India</h3>
+    <p><strong>Bachelor of Engineering - Computer Engineering</strong> <em>(July 2017 - July 2021)</em></p>
+    <ul>
+      <li>Grade: 1.4</li>
+      <li>Key subjects: Data Structures, DBMS, Data Analytics, Machine Learning, AI</li>
+    </ul>
+  </div>
+
+  <div class="section" id="projects">
+    <h2><a href="projects/index.html" class="projects-list">Projects</a></h2>
+    <ul>
+      <li><a href="projects/project1.html" class="projects-list">Master Thesis: Multi-Perspective Video Analysis System</a></li>
+      <li><a href="projects/project2.html" class="projects-list">Project: Validating Attribution Techniques</a></li>
+      <li><a href="projects/project3.html" class="projects-list">Bachelor Thesis: System for Waste Management: Smartzzy</a></li>
+      <li><a href="projects/project4.html" class="projects-list">Hackathon Project: Farmers' Mart</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="certifications">
+    <h2>Certifications and Patents</h2>
+    <ul>
+      <li><strong>Microsoft</strong>: Microsoft Technical Associate for Introduction to Programming Using Python. (August 2020)</li>
+      <li><strong>Coursera</strong>: Programming for Everybody (Getting Started with Python) by the University of Michigan (May 2020), Python Data Structures by the University of Michigan (May 2020), Using Python to Access Web Data by the University of Michigan. (June 2020)</li>
+      <li><strong>Patents</strong>: 
+        <ul>
+          <li>Smartzzy, Application number: 202121011507, Region: India, Status: Published (September 2022).</li>
+          <li>Smart Parkade, Application number: 202121011511, Region: India, Status: Published (September 2022).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="achievements">
+    <h2>Achievements & Co-curricular Activities</h2>
+    <ul>
+      <li>Runner up in Smart India Hackathon conducted in DYPIEMR (February 2020).</li>
+      <li>Smart India Hackathon - 2020 finalists - Top 5 projects from India (August 2020).</li>
+      <li>Runner up in Gamming Jamming event conductedin DYPIEMR by COMPSA (February 2020).</li>
+      <li>Winner of Computer Network Model Making Competition conducted in DYPIEMR in association with Computer Society of India (October 2019).</li>
+      <li>Runner up of Mini Project Exhibition conducted in DYPIEMR in association with ACM (October 2019).</li>
+      <li>Finalist in the Hackathon “Solve for Safer India” organized by Indian Road Safety Campaign, Ministry of Road Transport & Highway, United Nations of Training & Research, IIT Guwahati, & Robert Bosch Engineering (April 2019).</li>
+      <li>Runner up of Techno-Frenzy Competition held in Department of Computer Engineering in association with DYPIEMR ACM Student Chapter(February 2019).</li>
+      <li>Winner of Model Making Competition organized by Computer Department of DYPIEMR in association with ISTE Student' s chapter, Pune,India (July 2018).</li>
+      <li>Second Runner up in technical project competition organized by ExpertsHub (June 2018).</li>
+    </ul>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: shardul.ask@gmail.com</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/" class="projects-list">shardul-kulkarni14</a></li>
+      <li>GitHub: <a href="https://github.com/shardulkulkarni14" class="projects-list">shardulkulkarni14</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  function toggleMenu() {
+    const navbarLinks = document.getElementById('navbar-links');
+    if (navbarLinks.style.display === 'block') {
+      navbarLinks.style.display = 'none';
+    } else {
+      navbarLinks.style.display = 'block';
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progress-bar').style.width = `${scrolled}%`;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
 </body>
 </html>

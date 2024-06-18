@@ -133,12 +133,39 @@ body {
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .skills-section div {
     flex: 1;
     min-width: 200px;
 }
-h3 {
+
+.skills-section h3 {
     color: #007bff;
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add underline */
+    padding-bottom: 5px; /* Space below underline */
+    margin-top: 20px; /* Space above heading */
+}
+
+.skills-section ul {
+    padding: 0;
+    list-style: none;
+}
+
+.skills-section li {
+    padding: 5px 0;
+}
+
+.skills-section li i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        flex-direction: column;
+    }
+}
+
 }
 .projects-list a {
     color: #007bff;
