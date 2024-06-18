@@ -25,10 +25,10 @@ body {
     color: #f8f9fa;
     font-size: 1.2em;
 }
-.menu-icon {
-    display: none; /* Hide the menu icon by default */
+.navbar .menu-icon {
     font-size: 1.5em;
     cursor: pointer;
+    display: none; /* Hide the menu icon by default */
 }
 .navbar-links {
     display: flex;
@@ -46,6 +46,12 @@ body {
     border-radius: 5px;
 }
 @media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between; /* Ensure proper spacing between brand and menu icon */
+    }
+    .navbar .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
     .navbar-links {
         display: none; /* Hide navbar links by default on small screens */
         flex-direction: column;
@@ -63,9 +69,6 @@ body {
     }
     .navbar-links a:last-child {
         border-bottom: none;
-    }
-    .menu-icon {
-        display: block; /* Show the menu icon on small screens */
     }
 }
 @media (min-width: 769px) {
