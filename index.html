@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shardul Kulkarni's Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -12,6 +13,7 @@
     padding: 0;
     background-color: #ffffff;
     color: #343a40;
+    scroll-behavior: smooth;
   }
   .navbar {
     display: flex;
@@ -24,6 +26,7 @@
     color: #f8f9fa;
     text-decoration: none;
     padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s;
   }
   .navbar a:hover {
     background-color: #007bff;
@@ -46,6 +49,10 @@
     border-radius: 50%;
     margin-right: 20px;
     border: 2px solid #343a40;
+    transition: transform 0.3s;
+  }
+  .header img:hover {
+    transform: scale(1.1);
   }
   .header div {
     flex: 1;
@@ -55,6 +62,13 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   .skills-section {
     display: flex;
@@ -67,6 +81,27 @@
   }
   h3 {
     color: #007bff;
+  }
+  .projects-list a {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+  }
+  .projects-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .projects-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   @media (max-width: 768px) {
     .navbar a {
@@ -84,21 +119,32 @@
       margin-bottom: 20px;
     }
   }
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #007bff;
+    z-index: 100;
+  }
 </style>
 </head>
 <body>
 
 <div class="navbar">
-  <a href="#about">About Me</a>
-  <a href="#resume">Resume</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#achievements">Achievements</a>
-  <a href="#contact">Contact</a>
+  <a href="#about"><i class="fas fa-user"></i> About Me</a>
+  <a href="#resume"><i class="fas fa-file"></i> Resume</a>
+  <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+  <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+  <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+  <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+  <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+  <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+  <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
 </div>
+
+<div id="progress-bar"></div>
 
 <div class="container">
 
@@ -116,7 +162,7 @@
   </div>
 
   <div class="section" id="resume">
-    <h2><a href="experience/Shardul_Kulkarni_CV-June11.pdf">Resume</a></h2>
+    <h2><a href="experience/Shardul_Kulkarni_CV-June11.pdf" class="projects-list">Resume</a></h2>
   </div>
 
   <div class="section" id="skills">
@@ -261,12 +307,12 @@
   </div>
 
   <div class="section" id="projects">
-    <h2><a href="projects/index.html">Projects</a></h2>
+    <h2><a href="projects/index.html" class="projects-list">Projects</a></h2>
     <ul>
-      <li><a href="projects/project1.html" style="color: #007bff;">Master Thesis: Multi-Perspective Video Analysis System</a></li>
-      <li><a href="projects/project2.html" style="color: #007bff;">Project: Validating Attribution Techniques</a></li>
-      <li><a href="projects/project3.html" style="color: #007bff;">Bachelor Thesis: System for Waste Management: Smartzzy</a></li>
-      <li><a href="projects/project4.html" style="color: #007bff;">Hackathon Project: Farmers' Mart</a></li>
+      <li><a href="projects/project1.html" class="projects-list">Master Thesis: Multi-Perspective Video Analysis System</a></li>
+      <li><a href="projects/project2.html" class="projects-list">Project: Validating Attribution Techniques</a></li>
+      <li><a href="projects/project3.html" class="projects-list">Bachelor Thesis: System for Waste Management: Smartzzy</a></li>
+      <li><a href="projects/project4.html" class="projects-list">Hackathon Project: Farmers' Mart</a></li>
     </ul>
   </div>
 
@@ -303,12 +349,36 @@
     <h2>Contact</h2>
     <ul>
       <li>Email: shardul.ask@gmail.com</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/" style="color: #007bff;">shardul-kulkarni14</a></li>
-      <li>GitHub: <a href="https://github.com/shardulkulkarni14" style="color: #007bff;">shardulkulkarni14</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/" class="projects-list">shardul-kulkarni14</a></li>
+      <li>GitHub: <a href="https://github.com/shardulkulkarni14" class="projects-list">shardulkulkarni14</a></li>
     </ul>
   </div>
 
 </div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progress-bar').style.width = `${scrolled}%`;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
 
 </body>
 </html>
