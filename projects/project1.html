@@ -18,6 +18,7 @@
     background-color: #343a40;
     padding: 10px;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .navbar a {
     color: #f8f9fa;
@@ -42,6 +43,13 @@
     background-color: #e9ecef;
     padding: 20px;
     border-radius: 10px;
+  }
+  @media (max-width: 768px) {
+    .navbar a {
+      padding: 10px;
+      flex: 1;
+      text-align: center;
+    }
   }
 </style>
 </head>
