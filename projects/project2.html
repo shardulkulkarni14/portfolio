@@ -4,187 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Validating Attribution Techniques</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    padding-top: 60px; /* Adjust this value based on the navbar height */
-    background-color: #ffffff;
-    color: #343a40;
-    scroll-behavior: smooth;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #343a40;
-    padding: 10px;
-    position: fixed; /* Make navbar fixed */
-    width: 100%; /* Ensure the navbar spans the full width */
-    top: 0; /* Position the navbar at the top */
-    z-index: 1000; /* Ensure the navbar is above other content */
-  }
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    color: #f8f9fa;
-    font-size: 1.2em;
-  }
-  .menu-icon {
-    display: none; /* Hide the menu icon by default */
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  .navbar-links {
-    display: flex;
-    gap: 15px;
-  }
-  .navbar a {
-    color: #f8f9fa;
-    text-decoration: none;
-    padding: 14px 20px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .navbar a:hover {
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-  }
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none; /* Hide navbar links by default on small screens */
-      flex-direction: column;
-      width: 100%;
-      background-color: #343a40;
-      position: absolute;
-      top: 50px; /* Adjust based on your navbar height */
-      left: 0;
-      z-index: 999; /* Ensure the dropdown is above other content */
-    }
-    .navbar-links a {
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #444;
-    }
-    .navbar-links a:last-child {
-      border-bottom: none;
-    }
-    .menu-icon {
-      display: block; /* Show the menu icon on small screens */
-    }
-  }
-  @media (min-width: 769px) {
-    .navbar-links {
-      display: flex !important; /* Ensure navbar links are shown on larger screens */
-    }
-  }
-  #progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background-color: #007bff;
-    z-index: 100;
-  }
-  .container {
-    padding: 20px;
-  }
-  .project-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  .project-content {
-    background-color: #e9ecef;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .project-content a {
-    color: #007bff;
-    text-decoration: none;
-    position: relative;
-  }
-  .project-content a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #007bff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  .project-content a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
-<div class="navbar">
-  <div class="navbar-brand">
-    <span>Shardul Kulkarni's Portfolio</span>
-    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
-  </div>
-  <div class="navbar-links" id="navbar-links">
-    <a href="../index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="../index.html#about"><i class="fas fa-user"></i> About Me</a>
-    <a href="../index.html#resume"><i class="fas fa-file"></i> Resume</a>
-    <a href="../index.html#skills"><i class="fas fa-cogs"></i> Skills</a>
-    <a href="../index.html#experience"><i class="fas fa-briefcase"></i> Experience</a>
-    <a href="../index.html#education"><i class="fas fa-graduation-cap"></i> Education</a>
-    <a href="../index.html#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-    <a href="../index.html#certifications"><i class="fas fa-certificate"></i> Certifications</a>
-    <a href="../index.html#achievements"><i class="fas fa-trophy"></i> Achievements</a>
-    <a href="../index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
-  </div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Shardul Kulkarni</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#achievements">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <div id="progress-bar"></div>
 
-<div class="container">
-  <div class="project-header">
-    <h1>Validating Attribution Techniques (Group Project - OVGU)</h1>
-    <p><strong>May 2023 - September 2023</strong></p>
-  </div>
+<div class="container mt-5 pt-5">
+    <div class="project-header text-center">
+        <h1>Validating Attribution Techniques (Group Project - OVGU)</h1>
+        <p><strong>May 2023 - September 2023</strong></p>
+    </div>
 
-  <div class="project-content">
-    <p>Implemented attribution methods including GradCAM, SmoothgradCAM++, ScoreCAM, and LayerCAM on models like ResNet18, ResNet50, VGG16, and InceptionV3.</p>
-    <ul>
-      <li>Conducted occlusion-based perturbation and adversarial noise assessment to identify vulnerabilities in attribution methods.</li>
-      <li>Generated over 16,000 perturbed images from 113 samples for robust experiments.</li>
-      <li>Developed and integrated evaluation metrics such as Pearson Correlation Coefficient, Earth Mover’s Distance, and Normalized Scanpath Saliency.</li>
-      <li>Verified vulnerabilities using the Captum library and compared results with state-of-the-art metrics.</li>
-    </ul>
-    <p><strong>Technologies:</strong> Deep Learning, Image Processing, Computer Vision, Python, PyTorch, TensorFlow.</p>
-    <a href="https://github.com/shardulkulkarni14/Validating-Attribution-Techniques" style="color: #007bff;">GitHub Repository</a>
-  </div>
+    <div class="project-content">
+        <p>Implemented attribution methods including GradCAM, SmoothgradCAM++, ScoreCAM, and LayerCAM on models like ResNet18, ResNet50, VGG16, and InceptionV3.</p>
+        <ul>
+            <li>Conducted occlusion-based perturbation and adversarial noise assessment to identify vulnerabilities in attribution methods.</li>
+            <li>Generated over 16,000 perturbed images from 113 samples for robust experiments.</li>
+            <li>Developed and integrated evaluation metrics such as Pearson Correlation Coefficient, Earth Mover’s Distance, and Normalized Scanpath Saliency.</li>
+            <li>Verified vulnerabilities using the Captum library and compared results with state-of-the-art metrics.</li>
+        </ul>
+        <p><strong>Technologies:</strong> Deep Learning, Image Processing, Computer Vision, Python, PyTorch, TensorFlow.</p>
+        <a href="https://github.com/shardulkulkarni14/Validating-Attribution-Techniques" class="projects-list">GitHub Repository</a>
+    </div>
 </div>
 
-<script>
-  function toggleMenu() {
-    const navbarLinks = document.getElementById('navbar-links');
-    if (navbarLinks.style.display === 'block') {
-      navbarLinks.style.display = 'none';
-    } else {
-      navbarLinks.style.display = 'block';
-    }
-  }
-
-  window.addEventListener('scroll', () => {
-    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (window.scrollY / docHeight) * 100;
-    document.getElementById('progress-bar').style.width = `${scrolled}%`;
-  });
-</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../assets/js/main.js"></script>
 
 </body>
 </html>
