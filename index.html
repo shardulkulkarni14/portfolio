@@ -11,6 +11,7 @@
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-top: 60px;
     background-color: #ffffff;
     color: #343a40;
     scroll-behavior: smooth;
@@ -21,6 +22,10 @@
     padding: 10px;
     justify-content: center;
     flex-wrap: wrap;
+    position: fixed; /* Add this line */
+    width: 100%; /* Add this line */
+    top: 0; /* Add this line */
+    z-index: 1000; /* Add this line */
   }
   .navbar a {
     color: #f8f9fa;
