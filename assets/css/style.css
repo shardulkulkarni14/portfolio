@@ -16,6 +16,7 @@ body {
     padding: 5px 10px; /* Reduce padding to make navbar smaller */
     position: fixed; /* Make navbar fixed */
     width: 100%; /* Ensure the navbar spans the full width */
+    height: 4.5%;
     top: 0; /* Position the navbar at the top */
     z-index: 1000; /* Ensure the navbar is above other content */
 }
@@ -84,7 +85,7 @@ body {
 }
 .container {
     padding: 20px;
-    margin-top: 10px; /* Add this to reduce gap below navbar */
+    margin-top: 1px; /* Add this to reduce gap below navbar */
 }
 .header {
     display: flex;
