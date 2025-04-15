@@ -123,6 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Format experience and education sections
     formatExperienceEducation();
+
+    // Syntax highlighting for code blocks
+    highlightCodeBlocks();
 });
 
 // Initialize particle effect in header
@@ -376,5 +379,50 @@ function formatExperienceEducation() {
         parent.removeChild(item);
         parent.removeChild(dateElem);
         parent.removeChild(list);
+    });
+}
+
+// Syntax highlighting for code blocks
+function highlightCodeBlocks() {
+    const codeBlocks = document.querySelectorAll('.code-block code');
+    
+    codeBlocks.forEach(block => {
+        // Get the raw text content instead of innerHTML to avoid HTML entities
+        let content = block.textContent;
+        let highlighted = '';
+        
+        // Split by lines to handle each line separately
+        const lines = content.split('\n');
+        
+        lines.forEach(line => {
+            // Check if the line is a comment
+            if (line.trim().startsWith('//')) {
+                highlighted += `<span class="comment">${line}</span>\n`;
+                return;
+            }
+            
+            // Process line that is not a full comment
+            let processedLine = line;
+            
+            // Highlight strings
+            processedLine = processedLine.replace(/(".*?"|'.*?'|`.*?`)/g, '<span class="string">$1</span>');
+            
+            // Highlight keywords
+            processedLine = processedLine.replace(/\b(const|var|let|function|return|if|else|for|while|switch|case|break|continue|new|this|typeof|instanceof)\b/g, '<span class="keyword">$1</span>');
+            
+            // Highlight object properties
+            processedLine = processedLine.replace(/(\w+)(?=\s*:)/g, '<span class="property">$1</span>');
+            
+            // Highlight brackets
+            processedLine = processedLine.replace(/(\{|\}|\[|\])/g, '<span class="bracket">$1</span>');
+            
+            // Highlight punctuation
+            processedLine = processedLine.replace(/(\(|\)|\;|\,)/g, '<span class="punctuation">$1</span>');
+            
+            highlighted += processedLine + '\n';
+        });
+        
+        // Apply the highlighted content
+        block.innerHTML = highlighted.trim();
     });
 }

@@ -25,7 +25,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user-circle mr-1"></i>About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#resume"><i class="fas fa-file-alt mr-1"></i>Resume</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code mr-1"></i>Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase mr-1"></i>Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap mr-1"></i>Education</a></li>
@@ -54,8 +53,8 @@
                 <span class="tech-tag"><i class="fas fa-cloud colored-icon"></i> Cloud AI</span>
             </div>
             <div class="mt-4">
-                <a href="#contact" class="btn-custom"><i class="fas fa-envelope"></i> Contact Me</a>
-                <a href="experience/Shardul_Kulkarni_15.04.25.pdf" class="btn-custom ml-2"><i class="fas fa-file-download"></i> Download CV</a>
+                <a href="#contact" class="btn-custom" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"><i class="fas fa-envelope"></i> Contact Me</a>
+                <a href="experience/Shardul_CV-20.06.pdf" class="btn-custom ml-2" download><i class="fas fa-file-download"></i> Download CV</a>
             </div>
         </div>
     </div>
@@ -74,14 +73,6 @@ const expertise = {
   goals: "Building AI systems that solve real-world problems"
 };</code></pre>
             </div>
-        </div>
-    </div>
-
-    <div class="section" id="resume">
-        <h2>Resume</h2>
-        <div class="section-content">
-            <p>My professional resume details my experience in AI engineering, computer vision research, and software development.</p>
-            <a href="experience/Shardul_Kulkarni_15.04.25.pdf" class="btn-custom mt-3"><i class="fas fa-file-download"></i> Download Resume</a>
         </div>
     </div>
 
