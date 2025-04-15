@@ -1,0 +1,33 @@
+CV Update Documentation
+
+Date of Update: [Current Date]
+
+Updates Made to Portfolio:
+
+1. Experience Section:
+   - Added new role: MAindTec GmbH (AI & Software Engineer, April 2025-Ongoing)
+   - Added new role: Otto-von-Guericke University (Research Assistant - Generative AI, December 2024-March 2025)
+   - Updated mediMESH role dates (March 2023-March 2025) and enhanced description
+   - Updated CemtrexLabs dates and role description
+
+2. Skills Section:
+   - Added C to programming languages
+   - Added new frameworks: HuggingFace, LangChain, Plotly, Tensorboard
+   - Updated developer tools with VS Code, Jupyter, Streamlit, Flask, Linux Server Setup, NAS Systems, REST APIs, CI/CD tools, Airflow
+   - Updated German language proficiency status
+
+3. Education Section:
+   - Updated Master's degree details with final GPA (1.7) and additional subjects
+   - Updated university name for Bachelor's degree
+
+4. Projects Section:
+   - Updated Master Thesis details with grade (1.3) and more detailed description
+   - Enhanced project descriptions with more technical details
+   - Added patent information to Smartzzy project
+   - Updated Farmers' Mart project with competition details
+
+Notes:
+- Main index.html file was updated
+- Individual project HTML files were updated
+- experience.md file was updated with latest information
+- Next step: Update the CV PDF file with the most recent version

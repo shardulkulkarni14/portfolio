@@ -1,24 +1,35 @@
 # Experience
 
-## Unify.ai
-**Open Source Machine Learning Contributor**  
-*Maay 2024 - Present*
-- Joined this recently in a volunteer program, so getting used to the platform.
-- Contributing to the development and maintenance of open-source machine learning projects.
+## MAindTec GmbH, Ingolstadt, Germany
+**AI & Software Engineer**  
+*April 2025 - Ongoing*
+- Onboarding to build a scalable RAG pipeline for document search.
+- Using Pinecone, LangChain, and Azure containers for deployment.
+
+## Otto-von-Guericke University, Magdeburg, Germany
+**Research Assistant - Generative AI**  
+*December 2024 - March 2025*
+- Developed a RAG pipeline to interpret medical workflow specifications.
+- Researched and implemented generative AI models for healthcare applications.
+- Explored LLM fine-tuning and agentic AI patterns for intelligent data retrieval.
 
 ## mediMESH - Clinical Insights, Magdeburg, Germany
-**Artificial Intelligence Engineer**  
-*March 2023 - Present*
-- Advanced from Research Assistant to AI and Software Engineering Work Student, spearheading AI innovations in clinical data privacy.
-- Developed a cutting-edge anonymization pipeline, reducing processing time from 3 days to less than 7 minutes (99.84% improvement) using Detectron2, YOLO, SAM, Docker, and OpenCV.
-- Implemented custom face detection modules and streamlined annotation with CVAT, enhancing accuracy and compliance with privacy standards.
-- Managed system administration and data workflows, ensuring seamless operation and data format integration (COCO, CVAT 1.1).
+**AI and Software Engineer - Work Student**  
+*March 2023 - March 2025*
+- Optimized AI pipelines, reducing processing time by 99.84%.
+- Built large-scale video processing systems with deep learning and cloud AI.
+- Deployed YOLO-based multi-camera tracking for healthcare analytics.
+- Led Azure deployments, ensuring scalability and security.
+- Designed DevOps pipelines with CI/CD (Azure DevOps, GitHub Actions).
+- Set up and managed multiple Linux servers & NAS systems for AI model hosting.
+- Integrated RAG pipelines for medical workflow analysis.
+- Worked with international clients, successfully delivering AI solutions.
 
 ## CemtrexLabs, Pune, India
 **Data Science Intern**  
-*July 2020 - August 2020*
-- Generated and cleaned the dataset from open source images required for the video analytics project.
-- Improved the transfer time of large datasets from 2 mins for 100 images to less than 1 sec for 100 images (99.17% improvement) by creating Python APIs.
+*July 2020 - September 2020*
+- Optimized ETL pipelines, reducing processing time by 99%.
+- Built ML models for predictive analytics in business intelligence.
 
 ## Knowledge Solution India, Pune, India
 **Data Science Trainee & Intern**  
@@ -26,3 +37,9 @@
 - Project: Real-time COVID-19 Forecasting.
 - Visualized and analyzed the dataset using Matplotlib and Seaborn to recognize patterns & trends in the data.
 - Predicted the potential COVID-19 cases in different regions of India using the Linear Regression algorithm.
+
+## Athens Information Technology, Greece
+**Undergraduate Fellowship Summer Project and Research Program**  
+*June 2019 - July 2019*
+- Implemented a Blockchain PoC for IoT-based transportation of sensitive goods.
+- Tools & Technologies: Ethereum Blockchain, Solidity, Go, Javascript, HTML, CSS, MetaMask.
