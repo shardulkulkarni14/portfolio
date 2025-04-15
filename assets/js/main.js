@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Fix for top header buttons
+    const contactBtn = document.querySelector('.contact-btn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+    
+    const downloadBtn = document.querySelector('.download-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            console.log("Download button clicked");
+            // Let the default behavior happen, but ensure it works
+            // If it doesn't work naturally, we force it
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.href = this.href;
+                link.setAttribute('download', '');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, 100);
+        });
+    }
+    
     // Initialize particles
     initParticles();
     

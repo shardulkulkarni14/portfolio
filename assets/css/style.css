@@ -524,6 +524,7 @@ em {
     text-decoration: none;
     display: inline-block;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .btn-custom.btn-sm {
@@ -539,6 +540,22 @@ em {
 
 .btn-custom i {
     margin-right: 8px;
+}
+
+.btn-custom.btn-lg {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.quick-links {
+    background: rgba(8, 20, 32, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.quick-links h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
 .code-block {
