@@ -3,15 +3,18 @@
 ## MAindTec GmbH, Ingolstadt, Germany
 **AI & Software Engineer**  
 *April 2025 - Ongoing*
-- Onboarding to build a scalable RAG pipeline for document search.
-- Using Pinecone, LangChain, and Azure containers for deployment.
+- Deployed an end-to-end RAG pipeline for enterprise document search using Pinecone,
+LangChain, and Azure containers.
+- Managed customer communications and requirements for AI deployment.
+- Led the development of a Data Fusion pipeline to integrate heterogeneous data sources.
+- Collaborated in agile teams using MLOps practices for robust product delivery.
 
 ## Otto-von-Guericke University, Magdeburg, Germany
 **Research Assistant - Generative AI**  
 *December 2024 - March 2025*
-- Developed a RAG pipeline to interpret medical workflow specifications.
-- Researched and implemented generative AI models for healthcare applications.
-- Explored LLM fine-tuning and agentic AI patterns for intelligent data retrieval.
+- Built RAG pipelines for interpreting medical workflow documents.
+- Implemented generative AI models and LLM fine-tuning strategies.
+- Explored agent-based AI systems for intelligent retrieval applications.
 
 ## mediMESH - Clinical Insights, Magdeburg, Germany
 **AI and Software Engineer - Work Student**  
