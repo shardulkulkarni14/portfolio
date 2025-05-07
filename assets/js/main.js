@@ -37,13 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle the mobile menu
     const navbarToggler = document.querySelector('.navbar-toggler');
     if (navbarToggler) {
-        navbarToggler.addEventListener('click', function() {
+        navbarToggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const navbarLinks = document.getElementById('navbarNav');
-            if (navbarLinks.classList.contains('show')) {
-                navbarLinks.classList.remove('show');
-            } else {
-                navbarLinks.classList.add('show');
-            }
+            navbarLinks.classList.toggle('show');
         });
     }
 
@@ -51,16 +49,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            const navbarCollapse = document.getElementById('navbarNav');
-            if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-            }
-            
-            // Smooth scroll to the section
+            // Get the target section ID from the href attribute
             const targetId = link.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
+            
             if (targetElement) {
                 event.preventDefault();
+                
+                // Close the navbar only on mobile
+                if (window.innerWidth < 992) {
+                    const navbarCollapse = document.getElementById('navbarNav');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+                
+                // Smooth scroll to the section
                 window.scrollTo({
                     top: targetElement.offsetTop - 70,
                     behavior: 'smooth'

@@ -129,6 +129,24 @@ body {
     .menu-icon {
         display: block;
     }
+    /* Bootstrap navbar in mobile view */
+    .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--dark);
+        padding: 0 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 12px 12px;
+        z-index: 999;
+    }
+    .navbar-collapse.show {
+        display: block !important;
+    }
+    .navbar-collapse .navbar-nav {
+        padding: 10px 0;
+    }
 }
 
 @media (min-width: 769px) {
@@ -151,7 +169,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .header {
