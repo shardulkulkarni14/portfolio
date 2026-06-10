@@ -1,461 +1,78 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Fix for top header buttons
-    const contactBtn = document.querySelector('.contact-btn');
-    if (contactBtn) {
-        contactBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    }
-    
-    const downloadBtn = document.querySelector('.download-btn');
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', function(e) {
-            console.log("Download button clicked");
-            // Let the default behavior happen, but ensure it works
-            // If it doesn't work naturally, we force it
-            setTimeout(() => {
-                const link = document.createElement('a');
-                link.href = this.href;
-                link.setAttribute('download', '');
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }, 100);
-        });
-    }
-    
-    // Initialize particles
-    initParticles();
-    
-    // Initialize typing effect
-    initTypingEffect();
-    
-    // Toggle the mobile menu
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    if (navbarToggler) {
-        navbarToggler.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const navbarLinks = document.getElementById('navbarNav');
-            navbarLinks.classList.toggle('show');
-        });
-    }
+/* Shardul Kulkarni — portfolio interactions (vanilla, no deps) */
+(function () {
+  "use strict";
 
-    // Add event listener to each nav link for smooth scrolling
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            // Get the target section ID from the href attribute
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                event.preventDefault();
-                
-                // Close the navbar only on mobile
-                if (window.innerWidth < 992) {
-                    const navbarCollapse = document.getElementById('navbarNav');
-                    if (navbarCollapse.classList.contains('show')) {
-                        navbarCollapse.classList.remove('show');
-                    }
-                }
-                
-                // Smooth scroll to the section
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        });
+  /* ----- mobile nav ----- */
+  var toggle = document.querySelector(".menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      var open = document.body.classList.toggle("nav-open");
+      toggle.setAttribute("aria-expanded", String(open));
     });
-
-    // Shrink navbar on scroll with glassmorphism effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.padding = '5px 20px';
-            navbar.style.background = 'rgba(10, 25, 41, 0.9)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.padding = '10px 20px';
-            navbar.style.background = 'rgba(10, 25, 41, 0.8)';
-            navbar.style.backdropFilter = 'blur(5px)';
-        }
+    document.querySelectorAll(".rail-nav a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        document.body.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
+  }
 
-    // Progress bar on scroll
-    window.addEventListener('scroll', () => {
-        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / docHeight) * 100;
-        document.getElementById('progress-bar').style.width = `${scrolled}%`;
-    });
+  /* ----- reading progress ----- */
+  var bar = document.getElementById("progress-bar");
+  function onScroll() {
+    if (!bar) return;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-    // Animate sections on scroll with staggered effect
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Add a small delay based on the index for a staggered effect
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                    
-                    // Add section-content class to all direct children for z-index
-                    entry.target.querySelectorAll(':scope > *:not(::before)').forEach(child => {
-                        child.classList.add('section-content');
-                    });
-                    
-                }, index * 150);
-                
-                // Unobserve after animation to improve performance
-                observer.unobserve(entry.target);
-            }
+  /* ----- scroll-reveal ----- */
+  var sections = document.querySelectorAll(
+    ".section-head, .t-item, .project, .skill-row, .edu-card, .about-grid, .contact-big"
+  );
+  sections.forEach(function (el) { el.classList.add("reveal"); });
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
         });
-    }, {
-        threshold: 0.1
-    });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    sections.forEach(function (el) { io.observe(el); });
+  } else {
+    sections.forEach(function (el) { el.classList.add("in"); });
+  }
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-    
-    // Add hover effects to skill items
-    const skillItems = document.querySelectorAll('.skills-section div');
-    skillItems.forEach(item => {
-        const randomColor = getRandomGradient();
-        item.addEventListener('mouseenter', () => {
-            item.style.boxShadow = `0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px ${randomColor.start}33`;
-            item.style.borderLeft = `3px solid ${randomColor.start}`;
+  /* ----- scrollspy on the rail ----- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".rail-nav a"));
+  var targets = navLinks
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+
+  if ("IntersectionObserver" in window && targets.length) {
+    var spy = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          navLinks.forEach(function (a) {
+            a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id);
+          });
         });
-        
-        item.addEventListener('mouseleave', () => {
-            item.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-            item.style.borderLeft = '3px solid transparent';
-        });
-    });
-    
-    // Add animation to profile image with AI-inspired effects
-    const profileImg = document.querySelector('.profile-img');
-    if (profileImg) {
-        profileImg.addEventListener('mouseenter', () => {
-            profileImg.style.transform = 'scale(1.05) rotate(5deg)';
-            profileImg.style.boxShadow = '0 8px 25px rgba(65, 186, 239, 0.3), 0 0 15px rgba(111, 66, 193, 0.3)';
-        });
-        
-        profileImg.addEventListener('mouseleave', () => {
-            profileImg.style.transform = 'scale(1) rotate(0deg)';
-            profileImg.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.3)';
-        });
-    }
-    
-    // Add tech tags to skills
-    addTechTags();
-    
-    // Format experience and education sections
-    formatExperienceEducation();
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
+    );
+    targets.forEach(function (t) { spy.observe(t); });
+  }
 
-    // Syntax highlighting for code blocks
-    highlightCodeBlocks();
-});
-
-// Initialize particle effect in header
-function initParticles() {
-    const header = document.querySelector('.header');
-    if (!header) return;
-    
-    const canvas = document.createElement('canvas');
-    canvas.classList.add('particles-canvas');
-    canvas.style.position = 'absolute';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.zIndex = '0';
-    canvas.style.opacity = '0.5';
-    
-    header.prepend(canvas);
-    
-    const ctx = canvas.getContext('2d');
-    const particles = [];
-    
-    function resizeCanvas() {
-        canvas.width = header.offsetWidth;
-        canvas.height = header.offsetHeight;
-    }
-    
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-    
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 0.5;
-            this.speedX = Math.random() * 0.5 - 0.25;
-            this.speedY = Math.random() * 0.5 - 0.25;
-            this.color = Math.random() > 0.5 ? '#6F42C1' : '#41BAEF';
-            this.alpha = Math.random() * 0.5 + 0.1;
-        }
-        
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            
-            if (this.x > canvas.width) this.x = 0;
-            else if (this.x < 0) this.x = canvas.width;
-            
-            if (this.y > canvas.height) this.y = 0;
-            else if (this.y < 0) this.y = canvas.height;
-        }
-        
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color + Math.floor(this.alpha * 255).toString(16).padStart(2, '0');
-            ctx.fill();
-        }
-    }
-    
-    function init() {
-        for (let i = 0; i < 50; i++) {
-            particles.push(new Particle());
-        }
-    }
-    
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-            
-            // Connect particles with lines if they're close
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 100) {
-                    ctx.beginPath();
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * (1 - distance / 100)})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.stroke();
-                }
-            }
-        }
-        
-        requestAnimationFrame(animate);
-    }
-    
-    init();
-    animate();
-}
-
-// Initialize typing effect for the header
-function initTypingEffect() {
-    const headerTitle = document.querySelector('.header h1');
-    if (!headerTitle) return;
-    
-    const originalText = headerTitle.textContent;
-    headerTitle.textContent = '';
-    
-    const typingSpeed = 50; // ms per character
-    let i = 0;
-    
-    function type() {
-        if (i < originalText.length) {
-            headerTitle.textContent += originalText.charAt(i);
-            i++;
-            setTimeout(type, typingSpeed);
-        } else {
-            // Add cursor blinking after typing is complete
-            headerTitle.innerHTML += '<span class="cursor">|</span>';
-            setInterval(() => {
-                const cursor = document.querySelector('.cursor');
-                if (cursor) {
-                    cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-                }
-            }, 500);
-        }
-    }
-    
-    // Start typing with a small delay
-    setTimeout(type, 500);
-}
-
-// Get random gradient colors
-function getRandomGradient() {
-    const colors = [
-        { start: '#6F42C1', end: '#8A63D2' },
-        { start: '#41BAEF', end: '#62D0FF' },
-        { start: '#7E57C2', end: '#9575CD' },
-        { start: '#3498DB', end: '#5DADE2' },
-        { start: '#5E35B1', end: '#7E57C2' }
-    ];
-    
-    return colors[Math.floor(Math.random() * colors.length)];
-}
-
-// Add tech tags to skills
-function addTechTags() {
-    // AI related technologies need special highlighting
-    const aiTechnologies = [
-        'Machine Learning', 'Deep Learning', 'Computer Vision', 
-        'Natural Language Processing', 'Neural Networks', 'TensorFlow',
-        'PyTorch', 'Keras', 'YOLO', 'OpenCV', 'NLP', 'HuggingFace',
-        'LangChain', 'Generative AI', 'Large Language Models'
-    ];
-    
-    // Get all skill items
-    const skillItems = document.querySelectorAll('.skills-section ul li');
-    
-    skillItems.forEach(item => {
-        const skillText = item.textContent.trim();
-        
-        // Check if this is an AI-related skill
-        if (aiTechnologies.some(tech => skillText.includes(tech))) {
-            // Create a badge for AI technologies
-            const badgeSpan = document.createElement('span');
-            badgeSpan.classList.add('ai-badge');
-            badgeSpan.innerHTML = '<i class="fas fa-robot"></i> AI';
-            item.appendChild(badgeSpan);
-        }
-    });
-}
-
-// Format experience and education sections
-function formatExperienceEducation() {
-    // Format experience items
-    const experienceItems = document.querySelectorAll('#experience > h3');
-    experienceItems.forEach(item => {
-        const company = item.textContent;
-        const dateElem = item.nextElementSibling;
-        const position = dateElem.querySelector('strong').textContent;
-        const dateText = dateElem.querySelector('em').textContent.replace(/[()]/g, '');
-        const list = dateElem.nextElementSibling;
-        
-        // Create new container div
-        const container = document.createElement('div');
-        container.classList.add('experience-item');
-        
-        // Date badge
-        const dateBadge = document.createElement('div');
-        dateBadge.classList.add('experience-date');
-        dateBadge.textContent = dateText;
-        
-        // Title
-        const title = document.createElement('div');
-        title.classList.add('experience-title');
-        title.textContent = position;
-        
-        // Company
-        const companyElem = document.createElement('div');
-        companyElem.classList.add('experience-company');
-        companyElem.textContent = company;
-        
-        // Append elements
-        container.appendChild(dateBadge);
-        container.appendChild(title);
-        container.appendChild(companyElem);
-        container.appendChild(list.cloneNode(true));
-        
-        // Replace old structure with new container
-        const parent = item.parentNode;
-        parent.insertBefore(container, item);
-        parent.removeChild(item);
-        parent.removeChild(dateElem);
-        parent.removeChild(list);
-    });
-    
-    // Format education items
-    const educationItems = document.querySelectorAll('#education > h3');
-    educationItems.forEach(item => {
-        const school = item.textContent;
-        const dateElem = item.nextElementSibling;
-        const degree = dateElem.querySelector('strong').textContent;
-        const dateText = dateElem.querySelector('em').textContent.replace(/[()]/g, '');
-        const list = dateElem.nextElementSibling;
-        
-        // Create new container div
-        const container = document.createElement('div');
-        container.classList.add('education-item');
-        
-        // Date badge
-        const dateBadge = document.createElement('div');
-        dateBadge.classList.add('education-date');
-        dateBadge.textContent = dateText;
-        
-        // Title
-        const title = document.createElement('div');
-        title.classList.add('education-title');
-        title.textContent = degree;
-        
-        // School
-        const schoolElem = document.createElement('div');
-        schoolElem.classList.add('education-school');
-        schoolElem.textContent = school;
-        
-        // Append elements
-        container.appendChild(dateBadge);
-        container.appendChild(title);
-        container.appendChild(schoolElem);
-        container.appendChild(list.cloneNode(true));
-        
-        // Replace old structure with new container
-        const parent = item.parentNode;
-        parent.insertBefore(container, item);
-        parent.removeChild(item);
-        parent.removeChild(dateElem);
-        parent.removeChild(list);
-    });
-}
-
-// Syntax highlighting for code blocks
-function highlightCodeBlocks() {
-    const codeBlocks = document.querySelectorAll('.code-block code');
-    
-    codeBlocks.forEach(block => {
-        // Get the raw text content instead of innerHTML to avoid HTML entities
-        let content = block.textContent;
-        let highlighted = '';
-        
-        // Split by lines to handle each line separately
-        const lines = content.split('\n');
-        
-        lines.forEach(line => {
-            // Check if the line is a comment
-            if (line.trim().startsWith('//')) {
-                highlighted += `<span class="comment">${line}</span>\n`;
-                return;
-            }
-            
-            // Process line that is not a full comment
-            let processedLine = line;
-            
-            // Highlight strings
-            processedLine = processedLine.replace(/(".*?"|'.*?'|`.*?`)/g, '<span class="string">$1</span>');
-            
-            // Highlight keywords
-            processedLine = processedLine.replace(/\b(const|var|let|function|return|if|else|for|while|switch|case|break|continue|new|this|typeof|instanceof)\b/g, '<span class="keyword">$1</span>');
-            
-            // Highlight object properties
-            processedLine = processedLine.replace(/(\w+)(?=\s*:)/g, '<span class="property">$1</span>');
-            
-            // Highlight brackets
-            processedLine = processedLine.replace(/(\{|\}|\[|\])/g, '<span class="bracket">$1</span>');
-            
-            // Highlight punctuation
-            processedLine = processedLine.replace(/(\(|\)|\;|\,)/g, '<span class="punctuation">$1</span>');
-            
-            highlighted += processedLine + '\n';
-        });
-        
-        // Apply the highlighted content
-        block.innerHTML = highlighted.trim();
-    });
-}
+  /* ----- footer year ----- */
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+})();

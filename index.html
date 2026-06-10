@@ -1,418 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shardul Kulkarni | AI & Software Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <meta name="description" content="Shardul Kulkarni - AI and Software Engineer specializing in Computer Vision, Deep Learning, and Generative AI">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shardul Kulkarni — CTO &amp; AI Engineer</title>
+<meta name="description" content="Shardul Kulkarni — CTO at MAindTec GmbH. I build production agentic AI systems: LangGraph multi-agent orchestration, hybrid RAG, and enterprise AI delivery for manufacturing and automotive.">
+<meta property="og:title" content="Shardul Kulkarni — CTO &amp; AI Engineer">
+<meta property="og:description" content="Production agentic AI systems: LangGraph, hybrid RAG, enterprise delivery. CTO at MAindTec GmbH, Germany.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shardulkulkarni14.github.io/portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0C0E'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23D9974C' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#"><i class="fas fa-brain mr-2"></i>Shardul Kulkarni</a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user-circle mr-1"></i>About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code mr-1"></i>Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase mr-1"></i>Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap mr-1"></i>Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-project-diagram mr-1"></i>Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#certifications"><i class="fas fa-certificate mr-1"></i>Certifications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#achievements"><i class="fas fa-trophy mr-1"></i>Achievements</a></li>
-                <li class="nav-item"><a class="nav-link" href="#referrals"><i class="fas fa-users mr-1"></i>Referrals</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope mr-1"></i>Contact</a></li>
-            </ul>
-        </div>
+<div class="grain" aria-hidden="true"></div>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<header class="rail">
+  <a class="monogram" href="#top" aria-label="Back to top">SK</a>
+  <nav class="rail-nav" aria-label="Sections">
+    <a href="#about"><span class="idx">01</span><span class="lbl">About</span></a>
+    <a href="#experience"><span class="idx">02</span><span class="lbl">Experience</span></a>
+    <a href="#projects"><span class="idx">03</span><span class="lbl">Projects</span></a>
+    <a href="#skills"><span class="idx">04</span><span class="lbl">Skills</span></a>
+    <a href="#education"><span class="idx">05</span><span class="lbl">Education</span></a>
+    <a href="#credentials"><span class="idx">06</span><span class="lbl">Credentials</span></a>
+    <a href="#referrals"><span class="idx">07</span><span class="lbl">Referrals</span></a>
+    <a href="#contact"><span class="idx">08</span><span class="lbl">Contact</span></a>
+  </nav>
+  <div class="rail-foot">
+    <a href="https://github.com/shardulkulkarni14" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/shardul-kulkarni14/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M1.15 4.74h2.85V14H1.15V4.74zM2.57 1.2a1.66 1.66 0 1 1 0 3.32 1.66 1.66 0 0 1 0-3.32zM5.84 4.74h2.74v1.27h.04c.38-.72 1.31-1.48 2.7-1.48 2.89 0 3.42 1.9 3.42 4.37V14h-2.85V9.47c0-1.08-.02-2.47-1.5-2.47-1.51 0-1.74 1.18-1.74 2.39V14H5.84V4.74z"/></svg>
+    </a>
+    <a href="mailto:shardul.ask@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M.05 3.56A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.56L8 8.41.05 3.56zM0 4.7v6.8A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2.5V4.7L8.27 9.4a.5.5 0 0 1-.54 0L0 4.7z"/></svg>
+    </a>
+  </div>
+</header>
+
+<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <span></span><span></span>
+</button>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <p class="kicker reveal-load" style="--d:0">Shardul Kulkarni · Ingolstadt / Munich, Germany</p>
+    <h1 class="reveal-load" style="--d:1">Shipping <em>agentic AI</em><br>from prototype to<br><em>production.</em></h1>
+    <p class="hero-sub reveal-load" style="--d:2">
+      Chief Technology Officer at <strong>MAindTec GmbH</strong> — leading end-to-end
+      GenAI &amp; Agentic AI delivery for enterprise clients in manufacturing and automotive.
+    </p>
+    <div class="hero-cta reveal-load" style="--d:3">
+      <a class="btn btn-solid" href="mailto:shardul.ask@gmail.com">Get in touch</a>
+      <a class="btn btn-ghost" href="experience/Shardul_Kulkarni_CV.pdf" target="_blank" rel="noopener">Résumé&nbsp;·&nbsp;PDF</a>
     </div>
-</nav>
+    <dl class="stat-row reveal-load" style="--d:4">
+      <div><dt>3+</dt><dd>years GenAI &amp; agentic delivery</dd></div>
+      <div><dt>3</dt><dd>enterprise AI programmes shipped</dd></div>
+      <div><dt>9</dt><dd>engineers led across functions</dd></div>
+      <div><dt>99.84%</dt><dd>AI pipeline speed-up at mediMESH</dd></div>
+    </dl>
+  </section>
 
-<div id="progress-bar"></div>
-
-<div class="container mt-5 pt-5">
-    <div class="header text-center my-4">
-        <div class="header-content">
-            <img src="assets/images/profile_new.jpg" alt="Profile Image" class="profile-img rounded-circle mx-auto d-block animate__animated animate__fadeIn"/>
-            <h1 class="animate__animated animate__fadeInDown">AI & Software Engineer</h1>
-            <div class="mt-3">
-                <span class="tech-tag"><i class="fas fa-brain colored-icon"></i> Machine Learning</span>
-                <span class="tech-tag"><i class="fas fa-eye colored-icon"></i> Computer Vision</span>
-                <span class="tech-tag"><i class="fas fa-robot colored-icon"></i> Deep Learning</span>
-                <span class="tech-tag"><i class="fas fa-comment-alt colored-icon"></i> NLP</span>
-                <span class="tech-tag"><i class="fas fa-cloud colored-icon"></i> Cloud AI</span>
-            </div>
-            <div class="mt-4" style="position: relative; z-index: 10;">
-                <a href="#contact" class="btn-custom btn-sm" style="display: inline-block;"><i class="fas fa-envelope"></i> Contact Me</a>
-                <a href="experience/Shardul_CV-20.06.pdf" class="btn-custom btn-sm" style="display: inline-block;" target="_blank"><i class="fas fa-file-pdf"></i> View CV</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section" id="about">
-        <h2>About Me</h2>
-        <div class="section-content">
-            <p>AI and Software Engineer with specialized expertise in Computer Vision, Deep Learning, and Generative AI. I build large-scale ML systems from research to production, with a focus on healthcare applications. My background combines cutting-edge AI research with practical software engineering to deliver robust, scalable solutions.</p>
-            
-            <div class="code-block">
-                <pre><code>// AI expertise areas
-const expertise = {
-  domains: ["Computer Vision", "Deep Learning", "Generative AI", "MLOps"],
-  languages: ["Python", "C++", "JavaScript", "Go"],
-  frameworks: ["PyTorch", "TensorFlow", "LangChain", "HuggingFace"],
-  goals: "Building AI systems that solve real-world problems"
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <header class="section-head"><span class="num">01</span><h2>About</h2></header>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lede">
+          I'm an AI engineer and delivery leader with 3+ years leading end-to-end GenAI and
+          Agentic AI implementations for enterprise clients.
+        </p>
+        <p>
+          As CTO at MAindTec GmbH I own the full delivery lifecycle: working directly with
+          enterprise customers to understand business challenges, translating them into scalable
+          AI solutions, implementing production-grade systems, and driving measurable outcomes.
+          I've delivered three complex AI transformation programmes across manufacturing and
+          automotive, and I bridge engineering teams, leadership stakeholders, and business
+          users daily.
+        </p>
+        <p>
+          Before that: generative-AI research at Otto-von-Guericke University and two years of
+          healthcare computer vision at mediMESH — multi-camera YOLO tracking, Azure
+          deployments, and a master's thesis (grade 1.3) on multi-perspective video analysis.
+        </p>
+      </div>
+      <figure class="about-card">
+        <img src="assets/images/profile_new.jpg" alt="Portrait of Shardul Kulkarni" loading="lazy">
+        <figcaption>
+<pre><code><span class="c">// current focus</span>
+<span class="k">const</span> shardul = {
+  role:   <span class="s">"CTO @ MAindTec GmbH"</span>,
+  builds: [<span class="s">"multi-agent systems"</span>,
+           <span class="s">"hybrid RAG"</span>,
+           <span class="s">"enterprise AI platforms"</span>],
+  stack:  [<span class="s">"LangGraph"</span>, <span class="s">"FastAPI"</span>,
+           <span class="s">"pgvector"</span>, <span class="s">"Azure"</span>],
 };</code></pre>
-            </div>
-        </div>
+        </figcaption>
+      </figure>
     </div>
+  </section>
 
-    <div class="section" id="skills">
-        <h2>Skills</h2>
-        <div class="section-content">
-            <div class="skills-section row">
-                <div class="col-md-4">
-                    <h3><i class="fas fa-code mr-2"></i>Programming Languages</h3>
-                    <ul>
-                        <li>Python <i class="devicon-python-plain colored"></i></li>
-                        <li>C++ <i class="devicon-cplusplus-plain colored"></i></li>
-                        <li>Java <i class="devicon-java-plain colored"></i></li>
-                        <li>Solidity <i class="devicon-solidity-plain colored"></i></li>
-                        <li>SQL <i class="devicon-mysql-plain colored"></i></li>
-                        <li>R <i class="devicon-r-plain colored"></i></li>
-                        <li>Shell Scripting <i class="devicon-linux-plain colored"></i></li>
-                        <li>Go <i class="devicon-go-plain colored"></i></li>
-                        <li>HTML/CSS <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i></li>
-                        <li>JavaScript <i class="devicon-javascript-plain colored"></i></li>
-                        <li>C <i class="devicon-c-plain colored"></i></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3><i class="fas fa-brain mr-2"></i>AI & Data Science</h3>
-                    <ul>
-                        <li>Machine Learning</li>
-                        <li>Deep Learning</li>
-                        <li>Computer Vision</li>
-                        <li>Natural Language Processing</li>
-                        <li>Recommender Systems</li>
-                        <li>Large Language Models</li>
-                        <li>Generative AI</li>
-                    </ul>
-                </div>
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <header class="section-head"><span class="num">02</span><h2>Experience</h2></header>
 
-                <div class="col-md-4">
-                    <h3><i class="fas fa-tools mr-2"></i>Frameworks & Libraries</h3>
-                    <ul>
-                        <li>TensorFlow <i class="devicon-tensorflow-original colored"></i></li>
-                        <li>Keras <i class="devicon-keras-plain colored"></i></li>
-                        <li>PyTorch <i class="devicon-pytorch-plain colored"></i></li>
-                        <li>Scikit-learn <i class="devicon-scikitlearn-plain colored"></i></li>
-                        <li>OpenCV <i class="devicon-opencv-plain colored"></i></li>
-                        <li>NLTK <i class="devicon-nltk-plain colored"></i></li>
-                        <li>Captum <i class="devicon-pytorch-plain colored"></i></li>
-                        <li>Pandas <i class="devicon-pandas-plain colored"></i></li>
-                        <li>Numpy <i class="devicon-numpy-plain colored"></i></li>
-                        <li>Matplotlib <i class="devicon-matplotlib-plain colored"></i></li>
-                        <li>MLflow <i class="devicon-mlflow-plain colored"></i></li>
-                        <li>HuggingFace <i class="devicon-pytorch-plain colored"></i></li>
-                        <li>LangChain</li>
-                        <li>Plotly</li>
-                        <li>Tensorboard</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h3><i class="fas fa-server mr-2"></i>DevOps & Tools</h3>
-                    <ul>
-                        <li>Git <i class="devicon-git-plain colored"></i></li>
-                        <li>Docker <i class="devicon-docker-plain colored"></i></li>
-                        <li>Google Cloud Platform <i class="devicon-googlecloud-plain colored"></i></li>
-                        <li>Azure <i class="devicon-azure-plain colored"></i></li>
-                        <li>Jenkins <i class="devicon-jenkins-plain colored"></i></li>
-                        <li>VS Code <i class="devicon-vscode-plain colored"></i></li>
-                        <li>Jupyter</li>
-                        <li>Streamlit</li>
-                        <li>Flask</li>
-                        <li>Linux Server Setup</li>
-                        <li>NAS Systems</li>
-                        <li>REST APIs</li>
-                        <li>CI/CD (Azure DevOps, GitHub Actions)</li>
-                        <li>Airflow</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3><i class="fas fa-database mr-2"></i>Databases</h3>
-                    <ul>
-                        <li>MySQL <i class="devicon-mysql-plain colored"></i></li>
-                        <li>PostgreSQL <i class="devicon-postgresql-plain colored"></i></li>
-                        <li>MongoDB <i class="devicon-mongodb-plain colored"></i></li>
-                        <li>SQLite <i class="devicon-sqlite-plain colored"></i></li>
-                        <li>Oracle <i class="devicon-oracle-plain colored"></i></li>
-                        <li>Firebase <i class="devicon-firebase-plain colored"></i></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h3><i class="fas fa-laptop-code mr-2"></i>Other Technical Skills</h3>
-                    <ul>
-                        <li>Windows <i class="devicon-windows8-original colored"></i></li>
-                        <li>Linux <i class="devicon-linux-plain colored"></i></li>
-                        <li>MacOS <i class="devicon-apple-original colored"></i></li>
-                        <li>Raspbian <i class="devicon-raspberrypi-line colored"></i></li>
-                        <li>Hindi</li>
-                        <li>Marathi</li>
-                        <li>English (C1)</li>
-                        <li>German (A2 - Currently improving)</li>
-                    </ul>
-                </div>
-            </div>
+    <ol class="timeline">
+      <li class="t-item">
+        <div class="t-meta"><span class="t-dates">Jan 2026 — Present</span><span class="t-loc">Ingolstadt, DE</span></div>
+        <div class="t-body">
+          <h3>Chief Technology Officer</h3>
+          <p class="t-org">MAindTec GmbH · B2B AI SaaS</p>
+          <ul>
+            <li>Lead end-to-end delivery of complex GenAI and Agentic AI programmes for enterprise clients in manufacturing and automotive.</li>
+            <li>Build production agentic systems with LangGraph — multi-agent orchestration, tool calling, structured output validation.</li>
+            <li>Architected hybrid RAG pipelines (pgvector, BM25 + dense retrieval + Cohere reranking) with LangSmith observability in production.</li>
+            <li>Act as the bridge between engineering teams, C-level stakeholders, and business users across all client engagements.</li>
+            <li>Delivered 3 projects end-to-end from discovery through deployment; lead 9 engineers across all functions.</li>
+          </ul>
         </div>
-    </div>
-
-    <div class="section" id="experience">
-        <h2>Experience</h2>
-        <div class="section-content">
-            <h3>MAindTec GmbH, Ingolstadt, Germany</h3>
-            <p><strong>AI & Software Engineer</strong> <em>(April 2025 - Ongoing)</em></p>
-            <ul>
-                <li>Onboarding to build a scalable RAG pipeline for document search.</li>
-                <li>Using Pinecone, LangChain, and Azure containers for deployment.</li>
-            </ul>
-            
-            <h3>Otto-von-Guericke University, Magdeburg, Germany</h3>
-            <p><strong>Research Assistant - Generative AI</strong> <em>(December 2024 - March 2025)</em></p>
-            <ul>
-                <li>Developed a RAG pipeline to interpret medical workflow specifications.</li>
-                <li>Researched and implemented generative AI models for healthcare applications.</li>
-                <li>Explored LLM fine-tuning and agentic AI patterns for intelligent data retrieval.</li>
-            </ul>
-            
-            <h3>mediMESH - Clinical Insights, Magdeburg, Germany</h3>
-            <p><strong>AI and Software Engineer - Work Student</strong> <em>(March 2023 - March 2025)</em></p>
-            <ul>
-                <li>Optimized AI pipelines, reducing processing time by 99.84%.</li>
-                <li>Built large-scale video processing systems with deep learning and cloud AI.</li>
-                <li>Deployed YOLO-based multi-camera tracking for healthcare analytics.</li>
-                <li>Led Azure deployments, ensuring scalability and security.</li>
-                <li>Designed DevOps pipelines with CI/CD (Azure DevOps, GitHub Actions).</li>
-                <li>Set up and managed multiple Linux servers & NAS systems for AI model hosting.</li>
-                <li>Integrated RAG pipelines for medical workflow analysis.</li>
-                <li>Worked with international clients, successfully delivering AI solutions.</li>
-            </ul>
-
-            <h3>CemtrexLabs, Pune, India</h3>
-            <p><strong>Data Science Intern</strong> <em>(July 2020 - September 2020)</em></p>
-            <ul>
-                <li>Optimized ETL pipelines, reducing processing time by 99%.</li>
-                <li>Built ML models for predictive analytics in business intelligence.</li>
-            </ul>
-            
-            <h3>Knowledge Solution India, Pune, India</h3>
-            <p><strong>Data Science Trainee & Intern</strong> <em>(May 2020 - June 2020)</em></p>
-            <ul>
-                <li>Project: Real-time COVID-19 Forecasting.</li>
-                <li>Visualized and analyzed the dataset using Matplotlib and Seaborn to recognize patterns & trends in the data.</li>
-                <li>Predicted the potential COVID-19 cases in different regions of India using the Linear Regression algorithm.</li>
-            </ul>
-            
-            <h3>Athens Information Technology, Greece</h3>
-            <p><strong>Undergraduate Fellowship Summer Project and Research Program</strong> <em>(June 2019 - July 2019)</em></p>
-            <ul>
-                <li>Implemented a Blockchain PoC for IoT-based transportation of sensitive goods.</li>
-                <li>Tools & Technologies: Ethereum Blockchain, Solidity, Go, Javascript, HTML, CSS, MetaMask.</li>
-            </ul>
+      </li>
+      <li class="t-item">
+        <div class="t-meta"><span class="t-dates">Jun — Dec 2025</span><span class="t-loc">Ingolstadt, DE</span></div>
+        <div class="t-body">
+          <h3>Lead Solution Engineer, AI &amp; DevOps</h3>
+          <p class="t-org">MAindTec GmbH</p>
+          <ul>
+            <li>Delivered end-to-end AI solutions for enterprise clients; led technical demos, scoping sessions, and architecture decisions.</li>
+            <li>Built agentic workflows with LangGraph; deployed scalable services on Azure with CI/CD and production monitoring.</li>
+          </ul>
         </div>
-    </div>
-
-    <div class="section" id="education">
-        <h2>Education</h2>
-        <div class="section-content">
-            <h3>Otto Von Guericke University, Magdeburg, Germany</h3>
-            <p><strong>Master of Sciences - Data and Knowledge Engineering</strong> <em>(April 2022 - October 2024)</em></p>
-            <ul>
-                <li>GPA: 1.7</li>
-                <li>Key subjects: Machine Learning, Deep Learning, Data Mining, Computer Vision, Recommender Systems, Cloud DevOps, Visual Analytics, Natural Language Processing, Data Warehousing, Distributed Data Management, Generative Models</li>
-            </ul>
-            <h3>Savitribai Phule Pune University (Dr. D. Y. Patil Institute Of Engineering Management And Research), Pune, India</h3>
-            <p><strong>Bachelor of Engineering - Computer Engineering</strong> <em>(July 2017 - July 2021)</em></p>
-            <ul>
-                <li>GPA: 1.4</li>
-                <li>Key subjects: Data Structures, DBMS, Data Analytics, Machine Learning, AI</li>
-            </ul>
+      </li>
+      <li class="t-item">
+        <div class="t-meta"><span class="t-dates">Apr — May 2025</span><span class="t-loc">Ingolstadt, DE</span></div>
+        <div class="t-body">
+          <h3>AI &amp; Software Engineer</h3>
+          <p class="t-org">MAindTec GmbH</p>
+          <ul>
+            <li>Built RAG-powered AI applications with LangChain and FastAPI; first production deployment on Azure with CI/CD.</li>
+          </ul>
         </div>
-    </div>
-
-    <div class="section" id="projects">
-        <h2>Projects</h2>
-        <div class="section-content">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item h-100">
-                        <div class="experience-date">March 2024 - October 2024</div>
-                        <div class="experience-title">Multi-Perspective Video Analysis System</div>
-                        <div class="experience-company">Master Thesis (Grade: 1.3)</div>
-                        <p>Developed a comprehensive system for multi-camera object tracking in healthcare environments.</p>
-                        <div class="mb-2">
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">YOLO</span>
-                        </div>
-                        <a href="projects/project1.html" class="btn-custom btn-sm"><i class="fas fa-arrow-right"></i> View Details</a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item h-100">
-                        <div class="experience-date">May 2023 - September 2023</div>
-                        <div class="experience-title">Validating Attribution Techniques</div>
-                        <div class="experience-company">Group Project - OVGU</div>
-                        <p>Evaluated model robustness using GradCAM, SmoothgradCAM++, ScoreCAM, and LayerCAM.</p>
-                        <div class="mb-2">
-                            <span class="tech-tag">Deep Learning</span>
-                            <span class="tech-tag">Interpretability</span>
-                            <span class="tech-tag">Captum</span>
-                        </div>
-                        <a href="projects/project2.html" class="btn-custom btn-sm"><i class="fas fa-arrow-right"></i> View Details</a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item h-100">
-                        <div class="experience-date">October 2020 - June 2021</div>
-                        <div class="experience-title">Smartzzy: Waste Management System</div>
-                        <div class="experience-company">Bachelor Thesis</div>
-                        <p>Built a deep learning-based waste segregation system using Raspberry Pi.</p>
-                        <div class="mb-2">
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Deep Learning</span>
-                            <span class="tech-tag">Raspberry Pi</span>
-                        </div>
-                        <a href="projects/project3.html" class="btn-custom btn-sm"><i class="fas fa-arrow-right"></i> View Details</a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item h-100">
-                        <div class="experience-date">August 2020</div>
-                        <div class="experience-title">Farmers' Mart</div>
-                        <div class="experience-company">Smart India Hackathon - Top 5 Finalist</div>
-                        <p>E-commerce platform connecting farmers and consumers with ML-based recommendations.</p>
-                        <div class="mb-2">
-                            <span class="tech-tag">ML</span>
-                            <span class="tech-tag">Web Dev</span>
-                            <span class="tech-tag">Recommendation Systems</span>
-                        </div>
-                        <a href="projects/project4.html" class="btn-custom btn-sm"><i class="fas fa-arrow-right"></i> View Details</a>
-                    </div>
-                </div>
-            </div>
+      </li>
+      <li class="t-item">
+        <div class="t-meta"><span class="t-dates">Dec 2024 — Mar 2025</span><span class="t-loc">Magdeburg, DE</span></div>
+        <div class="t-body">
+          <h3>Research Assistant, Generative AI</h3>
+          <p class="t-org">Otto-von-Guericke University</p>
+          <ul>
+            <li>Built RAG pipelines to interpret medical workflow specifications.</li>
+            <li>Implemented LLM fine-tuning and agent-based retrieval for healthcare applications.</li>
+          </ul>
         </div>
-    </div>
-
-    <div class="section" id="certifications">
-        <h2>Certifications and Patents</h2>
-        <div class="section-content">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item">
-                        <div class="experience-title"><i class="fas fa-certificate mr-2"></i>Certifications</div>
-                        <ul>
-                            <li><strong>Microsoft</strong>: Microsoft Technical Associate for Introduction to Programming Using Python. (August 2020)</li>
-                            <li><strong>Coursera</strong>: Programming for Everybody (Getting Started with Python) by the University of Michigan (May 2020)</li>
-                            <li><strong>Coursera</strong>: Python Data Structures by the University of Michigan (May 2020)</li>
-                            <li><strong>Coursera</strong>: Using Python to Access Web Data by the University of Michigan. (June 2020)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item">
-                        <div class="experience-title"><i class="fas fa-lightbulb mr-2"></i>Patents</div>
-                        <ul>
-                            <li><strong>Smartzzy</strong>
-                                <p>Application number: 202121011507, Region: India</p>
-                                <p>Status: Published (September 2022)</p>
-                            </li>
-                            <li><strong>Smart Parkade</strong>
-                                <p>Application number: 202121011511, Region: India</p>
-                                <p>Status: Published (September 2022)</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      </li>
+      <li class="t-item">
+        <div class="t-meta"><span class="t-dates">Mar 2023 — Mar 2025</span><span class="t-loc">Magdeburg, DE</span></div>
+        <div class="t-body">
+          <h3>AI &amp; Software Engineer · Working Student</h3>
+          <p class="t-org">mediMESH — Clinical Insights</p>
+          <ul>
+            <li>Built YOLO-based multi-camera tracking in PyTorch for healthcare analytics; optimized inference pipelines by 99.84%.</li>
+            <li>Led Azure deployments, CI/CD pipelines (Azure DevOps, GitHub Actions), and Linux server / NAS infrastructure end-to-end.</li>
+            <li>Worked directly with international clients, delivering AI solutions into clinical environments.</li>
+          </ul>
         </div>
-    </div>
-
-    <div class="section" id="achievements">
-        <h2>Achievements</h2>
-        <div class="section-content">
-            <div class="experience-item">
-                <div class="experience-title"><i class="fas fa-trophy mr-2"></i>Awards & Accomplishments</div>
-                <ul>
-                    <li>Smart India Hackathon - 2020 finalists - Top 5 projects from India (August 2020).</li>
-                    <li>Runner up in Smart India Hackathon conducted in DYPIEMR (February 2020).</li>
-                    <li>Runner up in Gamming Jamming event conducted in DYPIEMR by COMPSA (February 2020).</li>
-                    <li>Winner of Computer Network Model Making Competition conducted in DYPIEMR in association with Computer Society of India (October 2019).</li>
-                    <li>Runner up of Mini Project Exhibition conducted in DYPIEMR in association with ACM (October 2019).</li>
-                    <li>Finalist in the Hackathon "Solve for Safer India" organized by Indian Road Safety Campaign, Ministry of Road Transport & Highway, United Nations of Training & Research, IIT Guwahati, & Robert Bosch Engineering (April 2019).</li>
-                    <li>Runner up of Techno-Frenzy Competition held in Department of Computer Engineering in association with DYPIEMR ACM Student Chapter(February 2019).</li>
-                    <li>Winner of Model Making Competition organized by Computer Department of DYPIEMR in association with ISTE Student's chapter, Pune,India (July 2018).</li>
-                    <li>Second Runner up in technical project competition organized by ExpertsHub (June 2018).</li>
-                </ul>
-            </div>
+      </li>
+      <li class="t-item t-compact">
+        <div class="t-meta"><span class="t-dates">2019 — 2020</span><span class="t-loc">Pune, IN · Athens, GR</span></div>
+        <div class="t-body">
+          <h3>Earlier</h3>
+          <ul>
+            <li><strong>CemtrexLabs</strong> — Data Science Intern: optimized ETL pipelines (−99% processing time), ML for predictive analytics.</li>
+            <li><strong>Knowledge Solution India</strong> — Data Science Trainee: real-time COVID-19 forecasting with regression models.</li>
+            <li><strong>Athens Information Technology</strong> — Undergraduate research fellowship: blockchain PoC for IoT transport of sensitive goods (Ethereum, Solidity, Go).</li>
+          </ul>
         </div>
-    </div>
+      </li>
+    </ol>
+  </section>
 
-    <div class="section" id="referrals">
-        <h2>Referrals</h2>
-        <div class="section-content">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item h-100">
-                        <div class="experience-title">Dr. Enrico Pannicke</div>
-                        <div class="experience-company">Founder & CEO at mediMESH GmbH</div>
-                        <p><i class="fas fa-envelope mr-2"></i>enrico.pannicke@medimesh.de</p>
-                        <a href="referrals/Shardul_recommendation_EnricoPannicke.pdf" class="btn-custom btn-sm mt-2"><i class="fas fa-file-pdf"></i> View Recommendation Letter</a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="experience-item h-100">
-                        <div class="experience-title">Chinmay Khedkar</div>
-                        <div class="experience-company">Ex Senior Software Engineer at MAQ Software</div>
-                        <p><i class="fas fa-envelope mr-2"></i>crkhedkar@gmail.com</p>
-                        <a href="referrals/LOR_Chinmay.pdf" class="btn-custom btn-sm mt-2"><i class="fas fa-file-pdf"></i> View Recommendation Letter</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <header class="section-head"><span class="num">03</span><h2>Projects</h2></header>
 
-    <div class="section" id="contact">
-        <h2>Contact</h2>
-        <div class="section-content">
-            <ul class="contact-info">
-                <li><i class="fas fa-envelope"></i>Email: shardul.ask@gmail.com</li>
-                <li><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/shardul-kulkarni14/" class="projects-list">shardul-kulkarni14</a></li>
-                <li><i class="fab fa-github"></i>GitHub: <a href="https://github.com/shardulkulkarni14" class="projects-list">shardulkulkarni14</a></li>
-            </ul>
-            <div class="text-center mt-4">
-                <a href="mailto:shardul.ask@gmail.com" class="btn-custom"><i class="fas fa-paper-plane"></i> Send Email</a>
-                <a href="https://www.linkedin.com/in/shardul-kulkarni14/" class="btn-custom ml-2"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
-            </div>
-        </div>
-    </div>
-</div>
+    <article class="project flagship">
+      <div class="p-tag">Flagship · Production B2B SaaS</div>
+      <h3>MAiQ — AI Engineering Platform</h3>
+      <p>
+        Enterprise AI platform serving manufacturing and automotive clients in production:
+        LangGraph agents, hybrid RAG, MCP servers, and LangSmith observability.
+        Multi-tenant with RBAC and SAML SSO.
+      </p>
+      <ul class="chips">
+        <li>LangGraph</li><li>FastAPI</li><li>Next.js 15</li><li>pgvector</li><li>Azure Container Apps</li><li>LangSmith</li>
+      </ul>
+    </article>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="project-grid">
+      <article class="project">
+        <div class="p-tag">Master Thesis · Grade 1.3</div>
+        <h3>Multi-Perspective Video Analysis</h3>
+        <p>Multi-camera, multi-object tracking for healthcare environments. Custom YOLO models and a feature-and-detection-based tracking algorithm that outperformed SOTA; heatmap reporting; privacy-compliant by design.</p>
+        <ul class="chips"><li>PyTorch</li><li>YOLO</li><li>Computer Vision</li></ul>
+      </article>
+      <article class="project">
+        <div class="p-tag">Research Project · OVGU</div>
+        <h3>Validating Attribution Techniques</h3>
+        <p>Evaluated deep-model robustness and interpretability with GradCAM, SmoothGradCAM++, ScoreCAM, and LayerCAM.</p>
+        <ul class="chips"><li>Interpretability</li><li>Captum</li><li>Deep Learning</li></ul>
+      </article>
+      <article class="project">
+        <div class="p-tag">Bachelor Thesis · Patented</div>
+        <h3>Smartzzy — Waste Management</h3>
+        <p>Deep-learning waste segregation on Raspberry Pi. Published Indian patent (App. 202121011507).</p>
+        <ul class="chips"><li>IoT</li><li>Deep Learning</li><li>Raspberry Pi</li></ul>
+      </article>
+      <article class="project">
+        <div class="p-tag">Smart India Hackathon · Top 5</div>
+        <h3>Farmers' Mart</h3>
+        <p>E-commerce platform connecting farmers and consumers with ML-based recommendations. Top-5 finalist among 10,000+ teams, Government of India.</p>
+        <ul class="chips"><li>ML</li><li>Recommenders</li><li>Web</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <header class="section-head"><span class="num">04</span><h2>Skills</h2></header>
+    <dl class="skill-ledger">
+      <div class="skill-row">
+        <dt>GenAI / Agentic AI</dt>
+        <dd>LangGraph · LangChain · Claude Agent SDK · MCP servers · multi-agent orchestration · tool calling · RAG (hybrid search, reranking) · prompt engineering · OpenAI / Anthropic / HuggingFace LLMs</dd>
+      </div>
+      <div class="skill-row">
+        <dt>AI / ML Engineering</dt>
+        <dd>LangSmith (evaluation, observability, tracing) · PyTorch · computer vision (YOLO) · fine-tuning · model quality metrics · production monitoring</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Backend</dt>
+        <dd>Python (5+ yrs) · FastAPI · Pydantic · pytest · TypeScript / Node.js · Next.js 15 · REST APIs · PostgreSQL · pgvector · Redis</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Cloud / DevOps</dt>
+        <dd>Azure (Container Apps, OpenAI Service, Blob, Key Vault, Bicep IaC) · Docker · CI/CD · Linux server administration</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Consulting / Delivery</dt>
+        <dd>Enterprise client delivery · C-level stakeholder management · use-case workshops · technical demos · solution architecture · AI adoption strategy</dd>
+      </div>
+      <div class="skill-row">
+        <dt>Languages</dt>
+        <dd>English (C1) · German (A2, improving) · Hindi (native) · Marathi (native)</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section" id="education">
+    <header class="section-head"><span class="num">05</span><h2>Education</h2></header>
+    <div class="edu-grid">
+      <article class="edu-card">
+        <span class="t-dates">2022 — 2024 · Magdeburg, DE</span>
+        <h3>M.Sc. Data &amp; Knowledge Engineering</h3>
+        <p class="t-org">Otto-von-Guericke University · GPA 1.7</p>
+        <p>Machine Learning, Deep Learning, Computer Vision, NLP, Generative Models, Recommender Systems, Cloud DevOps, Distributed Data Management.</p>
+      </article>
+      <article class="edu-card">
+        <span class="t-dates">2017 — 2021 · Pune, IN</span>
+        <h3>B.E. Computer Engineering</h3>
+        <p class="t-org">Savitribai Phule Pune University · GPA 1.4</p>
+        <p>Data Structures, DBMS, Data Analytics, Machine Learning, AI.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= CREDENTIALS ================= -->
+  <section class="section" id="credentials">
+    <header class="section-head"><span class="num">06</span><h2>Credentials</h2></header>
+    <div class="cred-grid">
+      <article class="edu-card">
+        <h3>Patents <span class="t-dates">India · Published 2022</span></h3>
+        <ul>
+          <li><strong>Smartzzy</strong> — Application 202121011507</li>
+          <li><strong>Smart Parkade</strong> — Application 202121011511</li>
+        </ul>
+      </article>
+      <article class="edu-card">
+        <h3>Certifications</h3>
+        <ul>
+          <li><strong>Microsoft</strong> — Technical Associate: Introduction to Programming Using Python</li>
+          <li><strong>University of Michigan</strong> (Coursera) — Python for Everybody, Python Data Structures, Using Python to Access Web Data</li>
+        </ul>
+      </article>
+      <article class="edu-card">
+        <h3>Selected awards</h3>
+        <ul>
+          <li><strong>Smart India Hackathon 2020</strong> — Top-5 finalist nationwide (Government of India, 10,000+ teams)</li>
+          <li><strong>"Solve for Safer India" Hackathon</strong> — finalist (IIT Guwahati, Robert Bosch Engineering, UN ITR)</li>
+          <li>Multiple winner / runner-up placements in university technical competitions, 2018–2020</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= REFERRALS ================= -->
+  <section class="section" id="referrals">
+    <header class="section-head"><span class="num">07</span><h2>Referrals</h2></header>
+    <div class="edu-grid">
+      <article class="edu-card ref-card">
+        <h3>Dr. Enrico Pannicke</h3>
+        <p class="t-org">Founder &amp; CEO, mediMESH GmbH</p>
+        <a class="btn btn-ghost btn-sm" href="referrals/Shardul_recommendation_EnricoPannicke.pdf" target="_blank" rel="noopener">Recommendation letter · PDF</a>
+      </article>
+      <article class="edu-card ref-card">
+        <h3>Chinmay Khedkar</h3>
+        <p class="t-org">Ex-Senior Software Engineer, MAQ Software</p>
+        <a class="btn btn-ghost btn-sm" href="referrals/LOR_Chinmay.pdf" target="_blank" rel="noopener">Recommendation letter · PDF</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact">
+    <header class="section-head"><span class="num">08</span><h2>Contact</h2></header>
+    <p class="contact-big">Building something with <em>agents, RAG, or enterprise AI?</em><br>Let's talk.</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="mailto:shardul.ask@gmail.com">shardul.ask@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/shardul-kulkarni14/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/shardulkulkarni14" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <footer class="foot">
+      <span>© <span id="year">2026</span> Shardul Kulkarni</span>
+      <span class="foot-mono">Ingolstadt / Munich, Germany</span>
+    </footer>
+  </section>
+
+</main>
+
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
