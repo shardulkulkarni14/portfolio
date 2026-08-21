@@ -101,10 +101,12 @@
 <span class="k">const</span> shardul = {
   role:   <span class="s">"CTO @ MAindTec GmbH"</span>,
   builds: [<span class="s">"multi-agent systems"</span>,
+           <span class="s">"agentic PMO automation"</span>,
+           <span class="s">"predictive ML (SpendSense)"</span>,
            <span class="s">"hybrid RAG"</span>,
            <span class="s">"enterprise AI platforms"</span>],
-  stack:  [<span class="s">"LangGraph"</span>, <span class="s">"FastAPI"</span>,
-           <span class="s">"pgvector"</span>, <span class="s">"Azure"</span>],
+  stack:  [<span class="s">"LangGraph"</span>, <span class="s">"FastAPI"</span>, <span class="s">"LightGBM"</span>,
+           <span class="s">"pgvector"</span>, <span class="s">"Azure"</span>, <span class="s">"AWS"</span>],
 };</code></pre>
         </figcaption>
       </figure>
@@ -122,11 +124,13 @@
           <h3>Chief Technology Officer</h3>
           <p class="t-org">MAindTec GmbH · B2B AI SaaS</p>
           <ul>
-            <li>Lead end-to-end delivery of complex GenAI and Agentic AI programmes for enterprise clients in manufacturing and automotive.</li>
-            <li>Build production agentic systems with LangGraph — multi-agent orchestration, tool calling, structured output validation.</li>
+            <li>Lead end-to-end delivery of GenAI and agentic AI programmes for enterprise clients in manufacturing and automotive, from discovery and solution design through production rollout and adoption.</li>
+            <li>Build production multi-agent systems with LangGraph — tool calling, MCP, structured-output validation — including an agentic PMO automation capability I built into the platform.</li>
+            <li>Built SpendSense, an AI price-benchmarking and cost-optimisation product, using LightGBM and Python from proof of concept to production flagship with measurable commercial impact.</li>
             <li>Architected hybrid RAG pipelines (pgvector, BM25 + dense retrieval + Cohere reranking) with LangSmith observability in production.</li>
-            <li>Act as the bridge between engineering teams, C-level stakeholders, and business users across all client engagements.</li>
-            <li>Delivered 3 projects end-to-end from discovery through deployment; lead 9 engineers across all functions.</li>
+            <li>Act as the bridge between engineering teams, C-level stakeholders, and business users; deploy on Azure and AWS with Docker and CI/CD.</li>
+            <li>Led MAindTec's accreditation into Microsoft for Startups (Founders Hub).</li>
+            <li>Delivered 3 enterprise AI programmes end-to-end from discovery through deployment; lead a team of 9 engineers across all functions.</li>
           </ul>
         </div>
       </li>
@@ -137,6 +141,9 @@
           <p class="t-org">MAindTec GmbH</p>
           <ul>
             <li>Delivered end-to-end AI solutions for enterprise clients; led technical demos, scoping sessions, and architecture decisions.</li>
+            <li>Built AI for engineering drawings: automated analysis of 2D and 3D CAD and JT files for manufacturing and automotive clients.</li>
+            <li>Built document-intelligence pipelines that extract structured data from technical PDFs to power RAG.</li>
+            <li>Stood up self-hosted vector search at scale (Milvus) for retrieval across large enterprise datasets.</li>
             <li>Built agentic workflows with LangGraph; deployed scalable services on Azure with CI/CD and production monitoring.</li>
           </ul>
         </div>
@@ -147,6 +154,7 @@
           <h3>AI &amp; Software Engineer</h3>
           <p class="t-org">MAindTec GmbH</p>
           <ul>
+            <li>Built the company's first production data and AI application, and set up its early cloud and CI/CD foundations.</li>
             <li>Built RAG-powered AI applications with LangChain and FastAPI; first production deployment on Azure with CI/CD.</li>
           </ul>
         </div>
@@ -157,8 +165,10 @@
           <h3>Research Assistant, Generative AI</h3>
           <p class="t-org">Otto-von-Guericke University</p>
           <ul>
-            <li>Built RAG pipelines to interpret medical workflow specifications.</li>
-            <li>Implemented LLM fine-tuning and agent-based retrieval for healthcare applications.</li>
+            <li>Built retrieval and RAG pipelines to interpret medical workflow specifications and documents.</li>
+            <li>Implemented LLM fine-tuning strategies for domain-specific generative AI models.</li>
+            <li>Explored agent-based AI systems for intelligent retrieval in healthcare applications.</li>
+            <li>Worked with embeddings and evaluation methods to measure and improve retrieval quality.</li>
           </ul>
         </div>
       </li>
@@ -168,9 +178,13 @@
           <h3>AI &amp; Software Engineer · Working Student</h3>
           <p class="t-org">mediMESH — Clinical Insights</p>
           <ul>
-            <li>Built YOLO-based multi-camera tracking in PyTorch for healthcare analytics; optimized inference pipelines by 99.84%.</li>
-            <li>Led Azure deployments, CI/CD pipelines (Azure DevOps, GitHub Actions), and Linux server / NAS infrastructure end-to-end.</li>
-            <li>Worked directly with international clients, delivering AI solutions into clinical environments.</li>
+            <li>Built computer-vision models in PyTorch over terabyte-scale video data; engineered GPU inference pipelines and optimized inference speed by 99.84%.</li>
+            <li>Deployed YOLO-based multi-camera tracking for real-time healthcare analytics in clinical environments.</li>
+            <li>Built large-scale video processing systems that combined deep learning with cloud AI services.</li>
+            <li>Integrated RAG pipelines to interpret medical workflow documents.</li>
+            <li>Led Azure deployments end-to-end with a focus on scalability and security; designed CI/CD pipelines with Azure DevOps and GitHub Actions.</li>
+            <li>Set up and managed multiple Linux servers and NAS systems for AI model hosting and data infrastructure.</li>
+            <li>Worked directly with international clients, delivering AI solutions into production.</li>
           </ul>
         </div>
       </li>
@@ -205,7 +219,26 @@
       </ul>
     </article>
 
+    <article class="project flagship">
+      <div class="p-tag">Flagship · Production · Predictive ML</div>
+      <h3>SpendSense — AI Price Benchmarking</h3>
+      <p>
+        Predictive price-benchmarking and cost-optimisation product for enterprise procurement.
+        Built with LightGBM and Python, it grew from proof of concept to a production flagship,
+        driving measurable commercial impact for manufacturing and automotive clients.
+      </p>
+      <ul class="chips">
+        <li>LightGBM</li><li>Python</li><li>Predictive ML</li><li>Feature Engineering</li><li>Azure</li>
+      </ul>
+    </article>
+
     <div class="project-grid">
+      <article class="project">
+        <div class="p-tag">Personal · Agentic Security</div>
+        <h3>Agentic AI Pentester</h3>
+        <p>Autonomous agentic system for authorised penetration testing: orchestrates recon, scanning, and vulnerability reporting with guardrails and structured-output validation.</p>
+        <ul class="chips"><li>Multi-agent</li><li>Security</li><li>Guardrails</li></ul>
+      </article>
       <article class="project">
         <div class="p-tag">Master Thesis · Grade 1.3</div>
         <h3>Multi-Perspective Video Analysis</h3>
