@@ -1,7 +1,7 @@
 # Experience
 
 ## MAindTec GmbH, Ingolstadt, Germany
-**Chief Technology Officer**
+**Founding AI Engineer (formerly Chief Technology Officer)**
 *January 2026 - Present*
 - Lead end-to-end delivery of GenAI and agentic AI programmes for enterprise clients in manufacturing and automotive, from discovery and solution design through production rollout and adoption.
 - Build production multi-agent systems with LangGraph (tool calling, MCP, structured-output validation), including an agentic PMO automation capability built into the platform.
