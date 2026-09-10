@@ -33,7 +33,7 @@
 - Worked with embeddings and evaluation methods to measure and improve retrieval quality.
 
 ## mediMESH - Clinical Insights, Magdeburg, Germany
-**AI & Software Engineer - Working Student**
+**AI & Software Engineer**
 *March 2023 - March 2025*
 - Built computer-vision models in PyTorch over terabyte-scale video data; engineered GPU inference pipelines and optimized inference speed by 99.84%.
 - Deployed YOLO-based multi-camera tracking for real-time healthcare analytics in clinical environments.
