@@ -2,14 +2,14 @@
 
 ## MAindTec GmbH, Ingolstadt, Germany
 **Founding AI Engineer (formerly Chief Technology Officer)**
-*January 2026 - Present*
-- Lead end-to-end delivery of GenAI and agentic AI programmes for enterprise clients in manufacturing and automotive, from discovery and solution design through production rollout and adoption.
-- Build production multi-agent systems with LangGraph (tool calling, MCP, structured-output validation), including an agentic PMO automation capability built into the platform.
+*January 2026 - September 2026*
+- Led end-to-end delivery of GenAI and agentic AI programmes for enterprise clients in manufacturing and automotive, from discovery and solution design through production rollout and adoption.
+- Built production multi-agent systems with LangGraph (tool calling, MCP, structured-output validation), including an agentic PMO automation capability built into the platform.
 - Built SpendSense, an AI price-benchmarking and cost-optimisation product, using LightGBM and Python from proof of concept to production flagship with measurable commercial impact.
 - Architected hybrid RAG pipelines (pgvector, BM25 + dense retrieval + Cohere reranking) with LangSmith observability in production.
-- Act as the bridge between engineering teams, C-level stakeholders, and business users; deploy on Azure and AWS with Docker and CI/CD.
+- Acted as the bridge between engineering teams, C-level stakeholders, and business users; deployed on Azure and AWS with Docker and CI/CD.
 - Led MAindTec's accreditation into Microsoft for Startups (Founders Hub).
-- Delivered 3 enterprise AI programmes end-to-end from discovery through deployment; lead a team of 9 engineers across all functions.
+- Delivered 3 enterprise AI programmes end-to-end from discovery through deployment; led a team of 9 engineers across all functions.
 
 **Lead Solution Engineer, AI & DevOps**
 *June 2025 - December 2025*
